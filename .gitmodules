@@ -1,0 +1,6 @@
+[submodule "Vendor/LROAuth2Client"]
+	path = Vendor/LROAuth2Client
+	url = https://github.com/lukeredpath/LROAuth2Client.git
+[submodule "Vendor/OAuthConsumer"]
+	path = Vendor/OAuthConsumer
+	url = https://github.com/colinhumber/oauthconsumer.git
