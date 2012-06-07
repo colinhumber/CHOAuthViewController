@@ -80,8 +80,8 @@
 																	   realm:nil   
 														   signatureProvider:self.signatureProvider];
 	
-	[authRequest prepare];
 	[authRequest setHTTPMethod:@"POST"];
+	[authRequest prepare];
 	
 	LRURLRequestOperation *operation = [[LRURLRequestOperation alloc] initWithURLRequest:authRequest];
 	
@@ -110,7 +110,7 @@
 		[self tokenAuthorize];
 	}	
 	else {
-
+		NSLog(@"Ticket failed: %@", [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
 	}
 }
 
@@ -131,8 +131,8 @@
 																	   token:(refresh ? _accessToken : _requestToken)
 																	   realm:nil   // our service provider doesn't specify a realm
 														   signatureProvider:_signatureProvider]; // use the default method, HMAC-SHA1
-   	[accessRequest prepare];
 	[accessRequest setHTTPMethod:@"POST"];
+   	[accessRequest prepare];
 	
 	LRURLRequestOperation *operation = [[LRURLRequestOperation alloc] initWithURLRequest:accessRequest];
 	
@@ -154,17 +154,12 @@
 
 	if (ticket.didSucceed) {
 		NSString *responseString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
-		NSDictionary *authData = [NSDictionary dictionaryWithFormEncodedString:responseString];
-
-		LROAuth2AccessToken *accessToken = [[LROAuth2AccessToken alloc] initWithAuthorizationResponse:authData];
-//		NSString *responseBody = [[NSString alloc] initWithData:data
-//													   encoding:NSUTF8StringEncoding];
-//		OAToken *aAccesToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
+		OAToken *accessToken = [[OAToken alloc] initWithHTTPResponseBody:responseString];
         
 		self.accessToken = accessToken;        
 		
-		if ([self.delegate respondsToSelector:@selector(oAuthClientDidReceiveAccessToken:)]) {
-			[self.delegate oAuthClientDidReceiveAccessToken:self];
+		if ([self.delegate respondsToSelector:@selector(oAuthLegacyClientDidReceiveAccessToken:)]) {
+			[self.delegate oAuthLegacyClientDidReceiveAccessToken:self];
 		}
 	}
 	else {

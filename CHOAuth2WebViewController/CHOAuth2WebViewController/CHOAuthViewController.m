@@ -17,6 +17,8 @@
 NSString *const CHOAuthReceivedAccessTokenNotification  = @"CHOAuthReceivedAccessTokenNotification";
 NSString *const CHOAuthRefreshedAccessTokenNotification = @"CHOAuthRefreshedAccessTokenNotification";
 
+@protocol CHOAuthClient;
+
 
 @interface CHOAuthViewController () <LROAuth2ClientDelegate, CHOAuthClientDelegate>
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
@@ -24,11 +26,11 @@ NSString *const CHOAuthRefreshedAccessTokenNotification = @"CHOAuthRefreshedAcce
 
 @property (nonatomic, strong) id<CHOAuthServiceDefinition> serviceDefinition;
 @property (nonatomic, strong) LROAuth2Client *client;
-@property (nonatomic, strong) CHOAuthClient *oAuthClient;
+@property (nonatomic, strong) CHOAuthClient *legacyClient;
 
 - (IBAction)cancel;
 - (BOOL)useLegacyOAuth;
-
+- (NSDictionary *)notificationUserInfo;
 @end
 
 
@@ -38,7 +40,7 @@ NSString *const CHOAuthRefreshedAccessTokenNotification = @"CHOAuthRefreshedAcce
 @synthesize navigationBar = _navigationBar;
 @synthesize serviceDefinition = _serviceDefinition;
 @synthesize client = _client;
-@synthesize oAuthClient = _oAuthClient;
+@synthesize legacyClient = _legacyClient;
 
 - (BOOL)useLegacyOAuth {
 	return [self.serviceDefinition oAuthVersion] == 1.0;
@@ -62,13 +64,13 @@ NSString *const CHOAuthRefreshedAccessTokenNotification = @"CHOAuthRefreshedAcce
 		if (self.useLegacyOAuth) {
 			NSAssert([serviceDefinition requestURLPath] != nil, @"A valid request URL path must be provided");
 		
-			self.oAuthClient = [[CHOAuthClient alloc] initWithConsumerKey:[_serviceDefinition clientID] 
-														   consumerSecret:[_serviceDefinition clientSecret] 
-															   requestURL:[NSURL URLWithString:[_serviceDefinition requestURLPath]]
-															 authorizeURL:[NSURL URLWithString:[_serviceDefinition authorizeURLPath]]
-																accessURL:[NSURL URLWithString:[_serviceDefinition tokenURLPath]]
-															  callbackURL:[NSURL URLWithString:[_serviceDefinition redirectURLPath]]];
-			self.oAuthClient.delegate = self;
+			self.legacyClient = [[CHOAuthClient alloc] initWithConsumerKey:[_serviceDefinition clientID] 
+															consumerSecret:[_serviceDefinition clientSecret] 
+																requestURL:[NSURL URLWithString:[_serviceDefinition requestURLPath]]
+															  authorizeURL:[NSURL URLWithString:[_serviceDefinition authorizeURLPath]]
+																 accessURL:[NSURL URLWithString:[_serviceDefinition tokenURLPath]]
+															   callbackURL:[NSURL URLWithString:[_serviceDefinition redirectURLPath]]];
+			self.legacyClient.delegate = self;
 		}
 		else {
 			self.client = [[LROAuth2Client alloc] initWithClientID:[_serviceDefinition clientID] 
@@ -78,55 +80,6 @@ NSString *const CHOAuthRefreshedAccessTokenNotification = @"CHOAuthRefreshedAcce
 			_client.userURL = [NSURL URLWithString:[_serviceDefinition authorizeURLPath]];
 			_client.tokenURL = [NSURL URLWithString:[_serviceDefinition tokenURLPath]];
 		}
-		
-		
-//		switch (serviceType) {
-//			case CHOAuthServiceInstagram:
-//			{
-//				settingPrefix = @"instagram";
-//				_additionalParameters = [[NSDictionary alloc] initWithObjectsAndKeys:
-//										 @"code", @"response_type",
-//										 nil];
-//				break;
-//			}
-//			case CHOAuthServiceFacebook:
-//			{
-//				settingPrefix = @"facebook";
-//				_additionalParameters = [[NSDictionary alloc] initWithObjectsAndKeys:
-//										 @"touch", @"display",
-//										 @"publish_stream", @"scope",
-//										 nil];
-//				break;
-//			}
-//			case CHOAuthServiceTwitter:
-//				settingPrefix = @"twitter";
-//				break;
-//				
-//			case CHOAuthServiceGoogle:
-//			{
-//				settingPrefix = @"google";
-//				_additionalParameters = [[NSDictionary alloc] initWithObjectsAndKeys:
-//										 @"code", @"response_type",
-//										 @"offline", @"access_type",
-//										 @"https://picasaweb.google.com/data/", @"scope",
-//										 nil];
-//				break;
-//			}
-//				
-//			default:
-//				NSAssert(NO, @"A valid service type must be provided.");
-//				break;
-//		}
-		
-//		CHServiceConfiguration *serviceConfiguration = [CHServiceConfiguration sharedInstance];
-//		clientID = [serviceConfiguration valueForSetting:[NSString stringWithFormat:@"%@ClientId", settingPrefix]];
-//		clientSecret = [serviceConfiguration valueForSetting:[NSString stringWithFormat:@"%@ClientSecret", settingPrefix]];
-//		redirectURL = [serviceConfiguration valueForSetting:[NSString stringWithFormat:@"%@RedirectURL", settingPrefix]];
-//		authorizeURL = [serviceConfiguration valueForSetting:[NSString stringWithFormat:@"%@AuthorizeURL", settingPrefix]];
-//		tokenURL = [serviceConfiguration valueForSetting:[NSString stringWithFormat:@"%@TokenURL", settingPrefix]];
-
-
-		
 
 		self.modalPresentationStyle = UIModalPresentationFormSheet;
 	}
@@ -140,8 +93,12 @@ NSString *const CHOAuthRefreshedAccessTokenNotification = @"CHOAuthRefreshedAcce
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-//	[_oAuthClient authorizeUsingWebView:self.webView];
-	[_client authorizeUsingWebView:self.webView additionalParameters:[self.serviceDefinition additionalParameters]];
+	if (self.useLegacyOAuth) {
+		[self.legacyClient authorizeUsingWebView:self.webView];
+	}
+	else {
+		[self.client authorizeUsingWebView:self.webView additionalParameters:[self.serviceDefinition additionalParameters]];		
+	}
 }
 
 - (void)viewDidUnload {
@@ -155,25 +112,49 @@ NSString *const CHOAuthRefreshedAccessTokenNotification = @"CHOAuthRefreshedAcce
 
 #pragma mark - Actions
 - (void)refreshAccessToken:(LROAuth2AccessToken *)accessToken {
-	[_client refreshAccessToken:accessToken];
+	if (self.useLegacyOAuth) {
+		
+	}
+	else {
+		[self.client refreshAccessToken:accessToken];		
+	}
 }
 
 - (IBAction)cancel {
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (NSDictionary *)notificationUserInfo {
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+			[NSNumber numberWithFloat:[self.serviceDefinition oAuthVersion]],
+			nil];
+}
+
 #pragma mark - LROAuth2ClientDelegate methods
 - (void)oauthClientDidReceiveAccessToken:(LROAuth2Client *)client {
 	dispatch_async(dispatch_get_main_queue(), ^{
-		[[NSNotificationCenter defaultCenter] postNotificationName:CHOAuthReceivedAccessTokenNotification object:client.accessToken];		
+		[[NSNotificationCenter defaultCenter] postNotificationName:CHOAuthReceivedAccessTokenNotification object:client.accessToken userInfo:[self notificationUserInfo]];		
 	});
 }
 
 - (void)oauthClientDidRefreshAccessToken:(LROAuth2Client *)client {
 	dispatch_async(dispatch_get_main_queue(), ^{
-		[[NSNotificationCenter defaultCenter] postNotificationName:CHOAuthRefreshedAccessTokenNotification object:client.accessToken];
+		[[NSNotificationCenter defaultCenter] postNotificationName:CHOAuthRefreshedAccessTokenNotification object:client.accessToken userInfo:[self notificationUserInfo]];
 	});
 }
 
+
+#pragma mark - CHOAuthClientDelegate
+- (void)oAuthLegacyClientDidReceiveAccessToken:(CHOAuthClient *)client {
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[NSNotificationCenter defaultCenter] postNotificationName:CHOAuthReceivedAccessTokenNotification object:client.accessToken userInfo:[self notificationUserInfo]];		
+	});
+}
+
+- (void)oAuthLegacyClientDidRefreshAccessToken:(CHOAuthClient *)client {
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[NSNotificationCenter defaultCenter] postNotificationName:CHOAuthRefreshedAccessTokenNotification object:client.accessToken userInfo:[self notificationUserInfo]];
+	});
+}
 
 @end

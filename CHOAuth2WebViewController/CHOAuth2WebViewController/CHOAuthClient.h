@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CHOAuthClientDelegate.h"
-
-@class LROAuth2AccessToken;
+#import "OAToken.h"
 
 @interface CHOAuthClient : NSObject
 
@@ -21,8 +20,8 @@
 @property (nonatomic, strong) NSURL *callbackURL;
 @property (nonatomic, weak) id<CHOAuthClientDelegate> delegate;
 
-//@property (nonatomic, strong) OAToken *accessToken;
-@property (nonatomic, strong) LROAuth2AccessToken *accessToken;
+@property (nonatomic, strong) OAToken *accessToken;
+//@property (nonatomic, strong) LROAuth2AccessToken *accessToken;
 
 
 - (id)initWithConsumerKey:(NSString *)consumerKey 
@@ -33,16 +32,10 @@
 			  callbackURL:(NSURL *)callbackURL;
 
 - (void)tokenRequest;
-//- (void)tokenRequestModifyRequest:(OAMutableURLRequest *)oRequest;
-//- (void)tokenRequestTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data;
-//- (void)tokenRequestTicket:(OAServiceTicket *)ticket didFailWithError:(NSError*)error;
-
 - (void)tokenAuthorize;
 
 - (void)tokenAccess;
 - (void)tokenAccess:(BOOL)refresh;
-//- (void)tokenAccessTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data;
-//- (void)tokenAccessTicket:(OAServiceTicket *)ticket didFailWithError:(NSError*)error;
 
 //- (void)storeAccessToken;
 //- (BOOL)restoreAccessToken;

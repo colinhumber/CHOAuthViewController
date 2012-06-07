@@ -9,6 +9,8 @@
 #import "CHViewController.h"
 #import "CHOAuthViewController.h"
 #import "CHInstagramDefinition.h"
+#import "CHFacebookDefinition.h"
+#import "CHTwitterDefinition.h"
 
 @interface CHViewController ()
 @property (nonatomic, strong) IBOutlet UILabel *instagramAccessTokenLabel;
@@ -60,11 +62,11 @@
 }
 
 - (IBAction)loginToFacebook {
-//	[self loginToService:CHOAuthServiceFacebook];	
+	[self loginToService:[[CHFacebookDefinition alloc] init]];
 }
 
 - (IBAction)loginToTwitter {
-//	[self loginToService:CHOAuthServiceTwitter];
+	[self loginToService:[[CHTwitterDefinition alloc] init]];
 }
 
 - (IBAction)loginToGoogle {

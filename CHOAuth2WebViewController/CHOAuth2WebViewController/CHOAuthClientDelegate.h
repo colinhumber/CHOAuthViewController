@@ -13,11 +13,10 @@
 @protocol CHOAuthClientDelegate <NSObject>
 
 @required
-- (void)oAuthClientDidReceiveAccessToken:(CHOAuthClient *)client;
-- (void)oAuthClientDidRefreshAccessToken:(CHOAuthClient *)client;
+- (void)oAuthLegacyClientDidReceiveAccessToken:(CHOAuthClient *)client;
+- (void)oAuthLegacyClientDidRefreshAccessToken:(CHOAuthClient *)client;
 
 @optional
-- (void)oAuthClientDidReceiveAccessCode:(CHOAuthClient *)client;
-- (void)oAuthClientDidCancel:(CHOAuthClient *)client;
+- (void)oAuthLegacyClientDidCancel:(CHOAuthClient *)client;
 
 @end
