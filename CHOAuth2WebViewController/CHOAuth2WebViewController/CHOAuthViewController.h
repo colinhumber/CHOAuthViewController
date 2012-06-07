@@ -8,23 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CHOAuthServiceDefinition;
 @class LROAuth2Client;
 @class LROAuth2AccessToken;
 
 extern NSString *const CHOAuthReceivedAccessTokenNotification;
 extern NSString *const CHOAuthRefreshedAccessTokenNotification;
 
-
-typedef enum {
-	CHOAuthServiceInstagram,
-	CHOAuthServiceFacebook,
-	CHOAuthServiceTwitter,
-	CHOAuthServiceGoogle
-} CHOAuthService;
-
 @interface CHOAuthViewController : UIViewController
 
-- (id)initWithService:(CHOAuthService)serviceType;
+- (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition;
 - (void)refreshAccessToken:(LROAuth2AccessToken *)accessToken;
 
 @end

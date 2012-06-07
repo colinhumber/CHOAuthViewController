@@ -7,7 +7,8 @@
 //
 
 #import "CHViewController.h"
-#import "CHOAuth2WebViewController.h"
+#import "CHOAuthViewController.h"
+#import "CHInstagramDefinition.h"
 
 @interface CHViewController ()
 @property (nonatomic, strong) IBOutlet UILabel *instagramAccessTokenLabel;
@@ -49,25 +50,25 @@
 }
 
 #pragma mark - Actions
-- (void)loginToService:(CHOAuthService)service {
-	CHOAuth2WebViewController *oauthController = [[CHOAuth2WebViewController alloc] initWithService:service];
+- (void)loginToService:(id<CHOAuthServiceDefinition>)service {
+	CHOAuthViewController *oauthController = [[CHOAuthViewController alloc] initWithServiceDefinition:service];
 	[self presentViewController:oauthController animated:YES completion:nil];
 }
 
 - (IBAction)loginToInstagram {
-	[self loginToService:CHOAuthServiceInstagram];
+	[self loginToService:[[CHInstagramDefinition alloc] init]];
 }
 
 - (IBAction)loginToFacebook {
-	[self loginToService:CHOAuthServiceFacebook];	
+//	[self loginToService:CHOAuthServiceFacebook];	
 }
 
 - (IBAction)loginToTwitter {
-	[self loginToService:CHOAuthServiceTwitter];
+//	[self loginToService:CHOAuthServiceTwitter];
 }
 
 - (IBAction)loginToGoogle {
-	[self loginToService:CHOAuthServiceGoogle];
+//	[self loginToService:CHOAuthServiceGoogle];
 }
 
 #pragma mark - Notifications
