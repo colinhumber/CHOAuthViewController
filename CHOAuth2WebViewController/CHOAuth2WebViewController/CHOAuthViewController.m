@@ -1,12 +1,12 @@
 //
-//  CHOAuth2WebViewController.m
-//  CHOAuth2WebViewController
+//  CHOAuthViewController.m
+//  CHOAuthViewController
 //
 //  Created by Colin Humber on 6/5/12.
 //  Copyright (c) 2012 Colin Humber. All rights reserved.
 //
 
-#import "CHOAuth2WebViewController.h"
+#import "CHOAuthViewController.h"
 #import "CHServiceConfiguration.h"
 #import "LROAuth2Client.h"
 #import "LROAuth2ClientDelegate.h"
@@ -17,7 +17,7 @@ NSString *const CHOAuthReceivedAccessTokenNotification  = @"CHOAuthReceivedAcces
 NSString *const CHOAuthRefreshedAccessTokenNotification = @"CHOAuthRefreshedAccessTokenNotification";
 
 
-@interface CHOAuth2WebViewController () <LROAuth2ClientDelegate, CHOAuthClientDelegate>
+@interface CHOAuthViewController () <LROAuth2ClientDelegate, CHOAuthClientDelegate>
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) NSDictionary *additionalParameters;
 @property (nonatomic, strong) LROAuth2Client *client;

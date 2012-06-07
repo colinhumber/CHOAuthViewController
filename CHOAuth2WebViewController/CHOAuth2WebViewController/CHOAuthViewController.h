@@ -1,6 +1,6 @@
 //
-//  CHOAuth2WebViewController.h
-//  CHOAuth2WebViewController
+//  CHOAuthViewController.h
+//  CHOAuthViewController
 //
 //  Created by Colin Humber on 6/5/12.
 //  Copyright (c) 2012 Colin Humber. All rights reserved.
@@ -22,7 +22,7 @@ typedef enum {
 	CHOAuthServiceGoogle
 } CHOAuthService;
 
-@interface CHOAuth2WebViewController : UIViewController
+@interface CHOAuthViewController : UIViewController
 
 - (id)initWithService:(CHOAuthService)serviceType;
 - (void)refreshAccessToken:(LROAuth2AccessToken *)accessToken;

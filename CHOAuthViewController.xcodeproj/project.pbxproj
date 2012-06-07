@@ -21,8 +21,8 @@
 		953E58A1157EAE0E00DB9CBD /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E588E157EAE0E00DB9CBD /* NSDictionary+QueryString.m */; };
 		953E58A2157EAE0E00DB9CBD /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5890157EAE0E00DB9CBD /* NSString+QueryString.m */; };
 		953E58A3157EAE0E00DB9CBD /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5892157EAE0E00DB9CBD /* NSURL+QueryInspector.m */; };
-		953E58B2157EB03200DB9CBD /* CHOAuth2WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E58B0157EB03200DB9CBD /* CHOAuth2WebViewController.m */; };
-		953E58B3157EB03200DB9CBD /* CHOAuth2WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 953E58B1157EB03200DB9CBD /* CHOAuth2WebViewController.xib */; };
+		953E58B2157EB03200DB9CBD /* CHOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E58B0157EB03200DB9CBD /* CHOAuthViewController.m */; };
+		953E58B3157EB03200DB9CBD /* CHOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 953E58B1157EB03200DB9CBD /* CHOAuthViewController.xib */; };
 		953E58BD157EB1FC00DB9CBD /* DefaultCHOAuth2Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E58BC157EB1FC00DB9CBD /* DefaultCHOAuth2Configuration.m */; };
 		953E58C0157EB6DE00DB9CBD /* CHConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E58BF157EB6DE00DB9CBD /* CHConfiguration.m */; };
 		953E58C3157EB90B00DB9CBD /* CHServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E58C2157EB90B00DB9CBD /* CHServiceConfiguration.m */; };
@@ -50,14 +50,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		953E5855157EADDD00DB9CBD /* CHOAuth2WebViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHOAuth2WebViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		953E5855157EADDD00DB9CBD /* CHOAuthViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHOAuthViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		953E5859157EADDD00DB9CBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		953E585B157EADDD00DB9CBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		953E585D157EADDD00DB9CBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		953E5861157EADDD00DB9CBD /* CHOAuth2WebViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CHOAuth2WebViewController-Info.plist"; sourceTree = "<group>"; };
+		953E5861157EADDD00DB9CBD /* CHOAuthViewController-Info.plist */ = {isa = PBXFileReference; path = "CHOAuthViewController-Info.plist"; sourceTree = "<group>"; };
 		953E5863157EADDD00DB9CBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		953E5865157EADDD00DB9CBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		953E5867157EADDD00DB9CBD /* CHOAuth2WebViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHOAuth2WebViewController-Prefix.pch"; sourceTree = "<group>"; };
+		953E5867157EADDD00DB9CBD /* CHOAuthViewController-Prefix.pch */ = {isa = PBXFileReference; path = "CHOAuthViewController-Prefix.pch"; sourceTree = "<group>"; };
 		953E5868157EADDD00DB9CBD /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
 		953E5869157EADDD00DB9CBD /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
 		953E586C157EADDD00DB9CBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -76,9 +76,9 @@
 		953E5890157EAE0E00DB9CBD /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
 		953E5891157EAE0E00DB9CBD /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
 		953E5892157EAE0E00DB9CBD /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
-		953E58AF157EB03200DB9CBD /* CHOAuth2WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuth2WebViewController.h; sourceTree = "<group>"; };
-		953E58B0157EB03200DB9CBD /* CHOAuth2WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuth2WebViewController.m; sourceTree = "<group>"; };
-		953E58B1157EB03200DB9CBD /* CHOAuth2WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHOAuth2WebViewController.xib; sourceTree = "<group>"; };
+		953E58AF157EB03200DB9CBD /* CHOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CHOAuthViewController.h; sourceTree = "<group>"; };
+		953E58B0157EB03200DB9CBD /* CHOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthViewController.m; sourceTree = "<group>"; };
+		953E58B1157EB03200DB9CBD /* CHOAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHOAuthViewController.xib; sourceTree = "<group>"; };
 		953E58BB157EB1FC00DB9CBD /* DefaultCHOAuth2Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultCHOAuth2Configuration.h; sourceTree = "<group>"; };
 		953E58BC157EB1FC00DB9CBD /* DefaultCHOAuth2Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultCHOAuth2Configuration.m; sourceTree = "<group>"; };
 		953E58BE157EB6DE00DB9CBD /* CHConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHConfiguration.h; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		953E584A157EADDD00DB9CBD = {
 			isa = PBXGroup;
 			children = (
-				953E585F157EADDD00DB9CBD /* CHOAuth2WebViewController */,
+				953E585F157EADDD00DB9CBD /* CHOAuthViewController */,
 				953E5858157EADDD00DB9CBD /* Frameworks */,
 				953E5856157EADDD00DB9CBD /* Products */,
 			);
@@ -156,7 +156,7 @@
 		953E5856157EADDD00DB9CBD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				953E5855157EADDD00DB9CBD /* CHOAuth2WebViewController.app */,
+				953E5855157EADDD00DB9CBD /* CHOAuthViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,10 +171,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		953E585F157EADDD00DB9CBD /* CHOAuth2WebViewController */ = {
+		953E585F157EADDD00DB9CBD /* CHOAuthViewController */ = {
 			isa = PBXGroup;
 			children = (
-				953E58AE157EB01800DB9CBD /* CHOAuth2WebViewController */,
+				953E58AE157EB01800DB9CBD /* CHOAuthViewController */,
 				953E5868157EADDD00DB9CBD /* CHAppDelegate.h */,
 				953E5869157EADDD00DB9CBD /* CHAppDelegate.m */,
 				953E586B157EADDD00DB9CBD /* MainStoryboard.storyboard */,
@@ -184,6 +184,7 @@
 				953E58BF157EB6DE00DB9CBD /* CHConfiguration.m */,
 				953E5860157EADDD00DB9CBD /* Supporting Files */,
 			);
+			name = CHOAuthViewController;
 			path = CHOAuth2WebViewController;
 			sourceTree = "<group>";
 		};
@@ -191,10 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				953E587C157EAE0E00DB9CBD /* Vendor */,
-				953E5861157EADDD00DB9CBD /* CHOAuth2WebViewController-Info.plist */,
+				953E5861157EADDD00DB9CBD /* CHOAuthViewController-Info.plist */,
 				953E5862157EADDD00DB9CBD /* InfoPlist.strings */,
 				953E5865157EADDD00DB9CBD /* main.m */,
-				953E5867157EADDD00DB9CBD /* CHOAuth2WebViewController-Prefix.pch */,
+				953E5867157EADDD00DB9CBD /* CHOAuthViewController-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,12 +237,12 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		953E58AE157EB01800DB9CBD /* CHOAuth2WebViewController */ = {
+		953E58AE157EB01800DB9CBD /* CHOAuthViewController */ = {
 			isa = PBXGroup;
 			children = (
-				953E58AF157EB03200DB9CBD /* CHOAuth2WebViewController.h */,
-				953E58B0157EB03200DB9CBD /* CHOAuth2WebViewController.m */,
-				953E58B1157EB03200DB9CBD /* CHOAuth2WebViewController.xib */,
+				953E58AF157EB03200DB9CBD /* CHOAuthViewController.h */,
+				953E58B0157EB03200DB9CBD /* CHOAuthViewController.m */,
+				953E58B1157EB03200DB9CBD /* CHOAuthViewController.xib */,
 				953E58BB157EB1FC00DB9CBD /* DefaultCHOAuth2Configuration.h */,
 				953E58BC157EB1FC00DB9CBD /* DefaultCHOAuth2Configuration.m */,
 				953E58C1157EB90B00DB9CBD /* CHServiceConfiguration.h */,
@@ -250,6 +251,7 @@
 				9585F192157FECD600454EC8 /* CHOAuthClient.m */,
 				9585F1D31580010000454EC8 /* CHOAuthClientDelegate.h */,
 			);
+			name = CHOAuthViewController;
 			path = CHOAuth2WebViewController;
 			sourceTree = "<group>";
 		};
@@ -319,9 +321,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		953E5854157EADDD00DB9CBD /* CHOAuth2WebViewController */ = {
+		953E5854157EADDD00DB9CBD /* CHOAuthViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 953E5873157EADDD00DB9CBD /* Build configuration list for PBXNativeTarget "CHOAuth2WebViewController" */;
+			buildConfigurationList = 953E5873157EADDD00DB9CBD /* Build configuration list for PBXNativeTarget "CHOAuthViewController" */;
 			buildPhases = (
 				953E5851157EADDD00DB9CBD /* Sources */,
 				953E5852157EADDD00DB9CBD /* Frameworks */,
@@ -331,9 +333,9 @@
 			);
 			dependencies = (
 			);
-			name = CHOAuth2WebViewController;
+			name = CHOAuthViewController;
 			productName = CHOAuth2WebViewController;
-			productReference = 953E5855157EADDD00DB9CBD /* CHOAuth2WebViewController.app */;
+			productReference = 953E5855157EADDD00DB9CBD /* CHOAuthViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -345,7 +347,7 @@
 				CLASSPREFIX = CH;
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 953E584F157EADDD00DB9CBD /* Build configuration list for PBXProject "CHOAuth2WebViewController" */;
+			buildConfigurationList = 953E584F157EADDD00DB9CBD /* Build configuration list for PBXProject "CHOAuthViewController" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -357,7 +359,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				953E5854157EADDD00DB9CBD /* CHOAuth2WebViewController */,
+				953E5854157EADDD00DB9CBD /* CHOAuthViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -369,7 +371,7 @@
 			files = (
 				953E5864157EADDD00DB9CBD /* InfoPlist.strings in Resources */,
 				953E586D157EADDD00DB9CBD /* MainStoryboard.storyboard in Resources */,
-				953E58B3157EB03200DB9CBD /* CHOAuth2WebViewController.xib in Resources */,
+				953E58B3157EB03200DB9CBD /* CHOAuthViewController.xib in Resources */,
 				9585F1CF157FF7D100454EC8 /* OATestServer.rb in Resources */,
 				9585F1D2157FF7D100454EC8 /* README in Resources */,
 			);
@@ -391,7 +393,7 @@
 				953E58A1157EAE0E00DB9CBD /* NSDictionary+QueryString.m in Sources */,
 				953E58A2157EAE0E00DB9CBD /* NSString+QueryString.m in Sources */,
 				953E58A3157EAE0E00DB9CBD /* NSURL+QueryInspector.m in Sources */,
-				953E58B2157EB03200DB9CBD /* CHOAuth2WebViewController.m in Sources */,
+				953E58B2157EB03200DB9CBD /* CHOAuthViewController.m in Sources */,
 				953E58BD157EB1FC00DB9CBD /* DefaultCHOAuth2Configuration.m in Sources */,
 				953E58C0157EB6DE00DB9CBD /* CHConfiguration.m in Sources */,
 				953E58C3157EB90B00DB9CBD /* CHServiceConfiguration.m in Sources */,
@@ -490,9 +492,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CHOAuth2WebViewController/CHOAuth2WebViewController-Prefix.pch";
-				INFOPLIST_FILE = "CHOAuth2WebViewController/CHOAuth2WebViewController-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CHOAuth2WebViewController/CHOAuthViewController-Prefix.pch";
+				INFOPLIST_FILE = "CHOAuth2WebViewController/CHOAuthViewController-Info.plist";
+				PRODUCT_NAME = CHOAuthViewController;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -501,9 +503,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CHOAuth2WebViewController/CHOAuth2WebViewController-Prefix.pch";
-				INFOPLIST_FILE = "CHOAuth2WebViewController/CHOAuth2WebViewController-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CHOAuth2WebViewController/CHOAuthViewController-Prefix.pch";
+				INFOPLIST_FILE = "CHOAuth2WebViewController/CHOAuthViewController-Info.plist";
+				PRODUCT_NAME = CHOAuthViewController;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -511,7 +513,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		953E584F157EADDD00DB9CBD /* Build configuration list for PBXProject "CHOAuth2WebViewController" */ = {
+		953E584F157EADDD00DB9CBD /* Build configuration list for PBXProject "CHOAuthViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				953E5871157EADDD00DB9CBD /* Debug */,
@@ -520,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		953E5873157EADDD00DB9CBD /* Build configuration list for PBXNativeTarget "CHOAuth2WebViewController" */ = {
+		953E5873157EADDD00DB9CBD /* Build configuration list for PBXNativeTarget "CHOAuthViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				953E5874157EADDD00DB9CBD /* Debug */,
