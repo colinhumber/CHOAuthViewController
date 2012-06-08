@@ -14,5 +14,6 @@
 - (IBAction)loginToFacebook;
 - (IBAction)loginToTwitter;
 - (IBAction)loginToGoogle;
+- (IBAction)refreshCurrentToken;
 
 @end

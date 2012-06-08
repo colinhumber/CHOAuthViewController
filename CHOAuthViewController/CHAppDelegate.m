@@ -8,7 +8,6 @@
 
 #import "CHAppDelegate.h"
 #import "CHConfiguration.h"
-#import "CHServiceConfiguration.h"
 
 @implementation CHAppDelegate
 
@@ -16,7 +15,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[CHServiceConfiguration sharedInstanceWithServiceConfiguration:[[CHConfiguration alloc] init]];
     // Override point for customization after application launch.
     return YES;
 }

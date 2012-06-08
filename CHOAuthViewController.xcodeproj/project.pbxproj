@@ -7,27 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B282C85158124990056E7D2 /* CHInstagramDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B282C84158124990056E7D2 /* CHInstagramDefinition.m */; };
-		3B282C8815812A110056E7D2 /* CHFacebookDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B282C8715812A110056E7D2 /* CHFacebookDefinition.m */; };
-		3B282D13158151DA0056E7D2 /* CHTwitterDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B282D12158151DA0056E7D2 /* CHTwitterDefinition.m */; };
 		953E585A157EADDD00DB9CBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E5859157EADDD00DB9CBD /* UIKit.framework */; };
 		953E585C157EADDD00DB9CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585B157EADDD00DB9CBD /* Foundation.framework */; };
 		953E585E157EADDD00DB9CBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585D157EADDD00DB9CBD /* CoreGraphics.framework */; };
-		953E5864157EADDD00DB9CBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 953E5862157EADDD00DB9CBD /* InfoPlist.strings */; };
-		953E5866157EADDD00DB9CBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5865157EADDD00DB9CBD /* main.m */; };
-		953E586A157EADDD00DB9CBD /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5869157EADDD00DB9CBD /* CHAppDelegate.m */; };
-		953E586D157EADDD00DB9CBD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953E586B157EADDD00DB9CBD /* MainStoryboard.storyboard */; };
-		953E5870157EADDD00DB9CBD /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E586F157EADDD00DB9CBD /* CHViewController.m */; };
 		953E589C157EAE0E00DB9CBD /* LROAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5881157EAE0E00DB9CBD /* LROAuth2AccessToken.m */; };
 		953E589D157EAE0E00DB9CBD /* LROAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5883157EAE0E00DB9CBD /* LROAuth2Client.m */; };
 		953E589E157EAE0E00DB9CBD /* LRURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5886157EAE0E00DB9CBD /* LRURLRequestOperation.m */; };
 		953E58A1157EAE0E00DB9CBD /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E588E157EAE0E00DB9CBD /* NSDictionary+QueryString.m */; };
 		953E58A2157EAE0E00DB9CBD /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5890157EAE0E00DB9CBD /* NSString+QueryString.m */; };
 		953E58A3157EAE0E00DB9CBD /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5892157EAE0E00DB9CBD /* NSURL+QueryInspector.m */; };
-		953E58B2157EB03200DB9CBD /* CHOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E58B0157EB03200DB9CBD /* CHOAuthViewController.m */; };
-		953E58B3157EB03200DB9CBD /* CHOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 953E58B1157EB03200DB9CBD /* CHOAuthViewController.xib */; };
-		953E58C0157EB6DE00DB9CBD /* CHConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E58BF157EB6DE00DB9CBD /* CHConfiguration.m */; };
-		9585F193157FECD700454EC8 /* CHOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F192157FECD600454EC8 /* CHOAuthClient.m */; };
 		9585F1BF157FF7D100454EC8 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F197157FF7D000454EC8 /* NSMutableURLRequest+Parameters.m */; };
 		9585F1C0157FF7D100454EC8 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F199157FF7D000454EC8 /* NSString+URLEncoding.m */; };
 		9585F1C1157FF7D100454EC8 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F19B157FF7D000454EC8 /* NSURL+Base.m */; };
@@ -44,33 +32,28 @@
 		9585F1CC157FF7D100454EC8 /* OAProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F1B2157FF7D100454EC8 /* OAProblem.m */; };
 		9585F1CD157FF7D100454EC8 /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F1B4157FF7D100454EC8 /* OARequestParameter.m */; };
 		9585F1CE157FF7D100454EC8 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F1B6157FF7D100454EC8 /* OAServiceTicket.m */; };
-		9585F1CF157FF7D100454EC8 /* OATestServer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 9585F1B8157FF7D100454EC8 /* OATestServer.rb */; };
 		9585F1D0157FF7D100454EC8 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F1BA157FF7D100454EC8 /* OAToken.m */; };
 		9585F1D1157FF7D100454EC8 /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F1BC157FF7D100454EC8 /* OATokenManager.m */; };
-		9585F1D2157FF7D100454EC8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 9585F1BE157FF7D100454EC8 /* README */; };
+		9585F26415825EA200454EC8 /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F24915825EA200454EC8 /* CHAppDelegate.m */; };
+		9585F26A15825EA200454EC8 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F25715825EA200454EC8 /* CHViewController.m */; };
+		9585F26E15825EA200454EC8 /* CHFacebookDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F25F15825EA200454EC8 /* CHFacebookDefinition.m */; };
+		9585F26F15825EA200454EC8 /* CHInstagramDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F26115825EA200454EC8 /* CHInstagramDefinition.m */; };
+		9585F27015825EA200454EC8 /* CHTwitterDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F26315825EA200454EC8 /* CHTwitterDefinition.m */; };
+		9585F27D15825EBE00454EC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F27915825EBE00454EC8 /* main.m */; };
+		9585F28615825F3100454EC8 /* CHOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F28015825F3100454EC8 /* CHOAuthClient.m */; };
+		9585F28715825F3100454EC8 /* CHOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F28415825F3100454EC8 /* CHOAuthViewController.m */; };
+		9585F28815825F3100454EC8 /* CHOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585F28515825F3100454EC8 /* CHOAuthViewController.xib */; };
+		9585F2B5158260AF00454EC8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9585F25A15825EA200454EC8 /* MainStoryboard.storyboard */; };
+		9585F2B6158260BA00454EC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9585F25815825EA200454EC8 /* InfoPlist.strings */; };
+		9585F2BA158260F800454EC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9585F2B8158260F800454EC8 /* InfoPlist.strings */; };
+		9585F2BD15829FBB00454EC8 /* CHGoogleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B282C83158124990056E7D2 /* CHInstagramDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHInstagramDefinition.h; path = "Sample Service Definitions/CHInstagramDefinition.h"; sourceTree = "<group>"; };
-		3B282C84158124990056E7D2 /* CHInstagramDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHInstagramDefinition.m; path = "Sample Service Definitions/CHInstagramDefinition.m"; sourceTree = "<group>"; };
-		3B282C8615812A110056E7D2 /* CHFacebookDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHFacebookDefinition.h; path = "Sample Service Definitions/CHFacebookDefinition.h"; sourceTree = "<group>"; };
-		3B282C8715812A110056E7D2 /* CHFacebookDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHFacebookDefinition.m; path = "Sample Service Definitions/CHFacebookDefinition.m"; sourceTree = "<group>"; };
-		3B282D11158151DA0056E7D2 /* CHTwitterDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHTwitterDefinition.h; path = "Sample Service Definitions/CHTwitterDefinition.h"; sourceTree = "<group>"; };
-		3B282D12158151DA0056E7D2 /* CHTwitterDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHTwitterDefinition.m; path = "Sample Service Definitions/CHTwitterDefinition.m"; sourceTree = "<group>"; };
-		3BBF5229158110BC00378B62 /* CHOAuthServiceDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHOAuthServiceDefinition.h; sourceTree = "<group>"; };
 		953E5855157EADDD00DB9CBD /* CHOAuthViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHOAuthViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		953E5859157EADDD00DB9CBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		953E585B157EADDD00DB9CBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		953E585D157EADDD00DB9CBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		953E5861157EADDD00DB9CBD /* CHOAuthViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CHOAuthViewController-Info.plist"; sourceTree = "<group>"; };
-		953E5863157EADDD00DB9CBD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		953E5865157EADDD00DB9CBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		953E5867157EADDD00DB9CBD /* CHOAuthViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHOAuthViewController-Prefix.pch"; sourceTree = "<group>"; };
-		953E5868157EADDD00DB9CBD /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
-		953E5869157EADDD00DB9CBD /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
-		953E586C157EADDD00DB9CBD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		953E586E157EADDD00DB9CBD /* CHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
-		953E586F157EADDD00DB9CBD /* CHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
 		953E5880157EAE0E00DB9CBD /* LROAuth2AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2AccessToken.h; sourceTree = "<group>"; };
 		953E5881157EAE0E00DB9CBD /* LROAuth2AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LROAuth2AccessToken.m; sourceTree = "<group>"; };
 		953E5882157EAE0E00DB9CBD /* LROAuth2Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LROAuth2Client.h; sourceTree = "<group>"; };
@@ -84,13 +67,6 @@
 		953E5890157EAE0E00DB9CBD /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
 		953E5891157EAE0E00DB9CBD /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
 		953E5892157EAE0E00DB9CBD /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
-		953E58AF157EB03200DB9CBD /* CHOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthViewController.h; sourceTree = "<group>"; };
-		953E58B0157EB03200DB9CBD /* CHOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthViewController.m; sourceTree = "<group>"; };
-		953E58B1157EB03200DB9CBD /* CHOAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHOAuthViewController.xib; sourceTree = "<group>"; };
-		953E58BE157EB6DE00DB9CBD /* CHConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHConfiguration.h; sourceTree = "<group>"; };
-		953E58BF157EB6DE00DB9CBD /* CHConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHConfiguration.m; sourceTree = "<group>"; };
-		9585F191157FECD600454EC8 /* CHOAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthClient.h; sourceTree = "<group>"; };
-		9585F192157FECD600454EC8 /* CHOAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthClient.m; sourceTree = "<group>"; };
 		9585F196157FF7D000454EC8 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		9585F197157FF7D000454EC8 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
 		9585F198157FF7D000454EC8 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
@@ -131,7 +107,32 @@
 		9585F1BC157FF7D100454EC8 /* OATokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATokenManager.m; sourceTree = "<group>"; };
 		9585F1BD157FF7D100454EC8 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		9585F1BE157FF7D100454EC8 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		9585F1D31580010000454EC8 /* CHOAuthClientDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHOAuthClientDelegate.h; sourceTree = "<group>"; };
+		9585F24815825EA200454EC8 /* CHAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
+		9585F24915825EA200454EC8 /* CHAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		9585F24A15825EA200454EC8 /* CHConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHConfiguration.h; sourceTree = "<group>"; };
+		9585F24B15825EA200454EC8 /* CHConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHConfiguration.m; sourceTree = "<group>"; };
+		9585F25615825EA200454EC8 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
+		9585F25715825EA200454EC8 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
+		9585F25B15825EA200454EC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9585F25E15825EA200454EC8 /* CHFacebookDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHFacebookDefinition.h; sourceTree = "<group>"; };
+		9585F25F15825EA200454EC8 /* CHFacebookDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHFacebookDefinition.m; sourceTree = "<group>"; };
+		9585F26015825EA200454EC8 /* CHInstagramDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHInstagramDefinition.h; sourceTree = "<group>"; };
+		9585F26115825EA200454EC8 /* CHInstagramDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHInstagramDefinition.m; sourceTree = "<group>"; };
+		9585F26215825EA200454EC8 /* CHTwitterDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTwitterDefinition.h; sourceTree = "<group>"; };
+		9585F26315825EA200454EC8 /* CHTwitterDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTwitterDefinition.m; sourceTree = "<group>"; };
+		9585F27215825EBE00454EC8 /* CHOAuthViewController-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CHOAuthViewController-Info.plist"; path = "CHOAuthViewController/CHOAuthViewController-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9585F27315825EBE00454EC8 /* CHOAuthViewController-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CHOAuthViewController-Prefix.pch"; path = "CHOAuthViewController/CHOAuthViewController-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		9585F27915825EBE00454EC8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CHOAuthViewController/main.m; sourceTree = SOURCE_ROOT; };
+		9585F27F15825F3100454EC8 /* CHOAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthClient.h; sourceTree = "<group>"; };
+		9585F28015825F3100454EC8 /* CHOAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthClient.m; sourceTree = "<group>"; };
+		9585F28115825F3100454EC8 /* CHOAuthClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthClientDelegate.h; sourceTree = "<group>"; };
+		9585F28215825F3100454EC8 /* CHOAuthServiceDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthServiceDefinition.h; sourceTree = "<group>"; };
+		9585F28315825F3100454EC8 /* CHOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthViewController.h; sourceTree = "<group>"; };
+		9585F28415825F3100454EC8 /* CHOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthViewController.m; sourceTree = "<group>"; };
+		9585F28515825F3100454EC8 /* CHOAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHOAuthViewController.xib; sourceTree = "<group>"; };
+		9585F2B9158260F800454EC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = CHOAuthViewController/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		9585F2BB15829FBB00454EC8 /* CHGoogleDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGoogleDefinition.h; sourceTree = "<group>"; };
+		9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGoogleDefinition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,23 +149,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B282C811581245C0056E7D2 /* Sample Service Definitions */ = {
-			isa = PBXGroup;
-			children = (
-				3B282C83158124990056E7D2 /* CHInstagramDefinition.h */,
-				3B282C84158124990056E7D2 /* CHInstagramDefinition.m */,
-				3B282C8615812A110056E7D2 /* CHFacebookDefinition.h */,
-				3B282C8715812A110056E7D2 /* CHFacebookDefinition.m */,
-				3B282D11158151DA0056E7D2 /* CHTwitterDefinition.h */,
-				3B282D12158151DA0056E7D2 /* CHTwitterDefinition.m */,
-			);
-			name = "Sample Service Definitions";
-			sourceTree = "<group>";
-		};
 		953E584A157EADDD00DB9CBD = {
 			isa = PBXGroup;
 			children = (
-				953E585F157EADDD00DB9CBD /* CHOAuthViewController */,
+				9585F24715825EA200454EC8 /* OAuth Demo */,
 				953E5858157EADDD00DB9CBD /* Frameworks */,
 				953E5856157EADDD00DB9CBD /* Products */,
 			);
@@ -188,34 +176,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		953E585F157EADDD00DB9CBD /* CHOAuthViewController */ = {
-			isa = PBXGroup;
-			children = (
-				953E58AE157EB01800DB9CBD /* CHOAuthViewController */,
-				3B282C811581245C0056E7D2 /* Sample Service Definitions */,
-				953E5868157EADDD00DB9CBD /* CHAppDelegate.h */,
-				953E5869157EADDD00DB9CBD /* CHAppDelegate.m */,
-				953E586B157EADDD00DB9CBD /* MainStoryboard.storyboard */,
-				953E586E157EADDD00DB9CBD /* CHViewController.h */,
-				953E586F157EADDD00DB9CBD /* CHViewController.m */,
-				953E58BE157EB6DE00DB9CBD /* CHConfiguration.h */,
-				953E58BF157EB6DE00DB9CBD /* CHConfiguration.m */,
-				953E5860157EADDD00DB9CBD /* Supporting Files */,
-			);
-			name = CHOAuthViewController;
-			path = CHOAuth2WebViewController;
-			sourceTree = "<group>";
-		};
 		953E5860157EADDD00DB9CBD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				953E587C157EAE0E00DB9CBD /* Vendor */,
-				953E5861157EADDD00DB9CBD /* CHOAuthViewController-Info.plist */,
-				953E5862157EADDD00DB9CBD /* InfoPlist.strings */,
-				953E5865157EADDD00DB9CBD /* main.m */,
-				953E5867157EADDD00DB9CBD /* CHOAuthViewController-Prefix.pch */,
+				9585F27215825EBE00454EC8 /* CHOAuthViewController-Info.plist */,
+				9585F2B8158260F800454EC8 /* InfoPlist.strings */,
+				9585F27915825EBE00454EC8 /* main.m */,
+				9585F27315825EBE00454EC8 /* CHOAuthViewController-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = ../CHOAuth2WebViewController;
 			sourceTree = "<group>";
 		};
 		953E587C157EAE0E00DB9CBD /* Vendor */ = {
@@ -253,21 +224,6 @@
 				953E5886157EAE0E00DB9CBD /* LRURLRequestOperation.m */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		953E58AE157EB01800DB9CBD /* CHOAuthViewController */ = {
-			isa = PBXGroup;
-			children = (
-				953E58AF157EB03200DB9CBD /* CHOAuthViewController.h */,
-				953E58B0157EB03200DB9CBD /* CHOAuthViewController.m */,
-				953E58B1157EB03200DB9CBD /* CHOAuthViewController.xib */,
-				9585F191157FECD600454EC8 /* CHOAuthClient.h */,
-				9585F192157FECD600454EC8 /* CHOAuthClient.m */,
-				9585F1D31580010000454EC8 /* CHOAuthClientDelegate.h */,
-				3BBF5229158110BC00378B62 /* CHOAuthServiceDefinition.h */,
-			);
-			name = CHOAuthViewController;
-			path = CHOAuth2WebViewController;
 			sourceTree = "<group>";
 		};
 		9585F194157FF7D000454EC8 /* OAuthConsumer */ = {
@@ -333,6 +289,53 @@
 			path = Crypto;
 			sourceTree = "<group>";
 		};
+		9585F24715825EA200454EC8 /* OAuth Demo */ = {
+			isa = PBXGroup;
+			children = (
+				9585F27E15825F3100454EC8 /* CHOAuthViewController */,
+				9585F24815825EA200454EC8 /* CHAppDelegate.h */,
+				9585F24915825EA200454EC8 /* CHAppDelegate.m */,
+				9585F24A15825EA200454EC8 /* CHConfiguration.h */,
+				9585F24B15825EA200454EC8 /* CHConfiguration.m */,
+				9585F25615825EA200454EC8 /* CHViewController.h */,
+				9585F25715825EA200454EC8 /* CHViewController.m */,
+				9585F25A15825EA200454EC8 /* MainStoryboard.storyboard */,
+				9585F25D15825EA200454EC8 /* Sample Service Definitions */,
+				953E5860157EADDD00DB9CBD /* Supporting Files */,
+			);
+			name = "OAuth Demo";
+			path = CHOAuthViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		9585F25D15825EA200454EC8 /* Sample Service Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				9585F25E15825EA200454EC8 /* CHFacebookDefinition.h */,
+				9585F25F15825EA200454EC8 /* CHFacebookDefinition.m */,
+				9585F26015825EA200454EC8 /* CHInstagramDefinition.h */,
+				9585F26115825EA200454EC8 /* CHInstagramDefinition.m */,
+				9585F26215825EA200454EC8 /* CHTwitterDefinition.h */,
+				9585F26315825EA200454EC8 /* CHTwitterDefinition.m */,
+				9585F2BB15829FBB00454EC8 /* CHGoogleDefinition.h */,
+				9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */,
+			);
+			path = "Sample Service Definitions";
+			sourceTree = "<group>";
+		};
+		9585F27E15825F3100454EC8 /* CHOAuthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9585F27F15825F3100454EC8 /* CHOAuthClient.h */,
+				9585F28015825F3100454EC8 /* CHOAuthClient.m */,
+				9585F28115825F3100454EC8 /* CHOAuthClientDelegate.h */,
+				9585F28215825F3100454EC8 /* CHOAuthServiceDefinition.h */,
+				9585F28315825F3100454EC8 /* CHOAuthViewController.h */,
+				9585F28415825F3100454EC8 /* CHOAuthViewController.m */,
+				9585F28515825F3100454EC8 /* CHOAuthViewController.xib */,
+			);
+			path = CHOAuthViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,11 +387,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953E5864157EADDD00DB9CBD /* InfoPlist.strings in Resources */,
-				953E586D157EADDD00DB9CBD /* MainStoryboard.storyboard in Resources */,
-				953E58B3157EB03200DB9CBD /* CHOAuthViewController.xib in Resources */,
-				9585F1CF157FF7D100454EC8 /* OATestServer.rb in Resources */,
-				9585F1D2157FF7D100454EC8 /* README in Resources */,
+				9585F2B6158260BA00454EC8 /* InfoPlist.strings in Resources */,
+				9585F2B5158260AF00454EC8 /* MainStoryboard.storyboard in Resources */,
+				9585F28815825F3100454EC8 /* CHOAuthViewController.xib in Resources */,
+				9585F2BA158260F800454EC8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,18 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953E5866157EADDD00DB9CBD /* main.m in Sources */,
-				953E586A157EADDD00DB9CBD /* CHAppDelegate.m in Sources */,
-				953E5870157EADDD00DB9CBD /* CHViewController.m in Sources */,
 				953E589C157EAE0E00DB9CBD /* LROAuth2AccessToken.m in Sources */,
 				953E589D157EAE0E00DB9CBD /* LROAuth2Client.m in Sources */,
 				953E589E157EAE0E00DB9CBD /* LRURLRequestOperation.m in Sources */,
 				953E58A1157EAE0E00DB9CBD /* NSDictionary+QueryString.m in Sources */,
 				953E58A2157EAE0E00DB9CBD /* NSString+QueryString.m in Sources */,
 				953E58A3157EAE0E00DB9CBD /* NSURL+QueryInspector.m in Sources */,
-				953E58B2157EB03200DB9CBD /* CHOAuthViewController.m in Sources */,
-				953E58C0157EB6DE00DB9CBD /* CHConfiguration.m in Sources */,
-				9585F193157FECD700454EC8 /* CHOAuthClient.m in Sources */,
 				9585F1BF157FF7D100454EC8 /* NSMutableURLRequest+Parameters.m in Sources */,
 				9585F1C0157FF7D100454EC8 /* NSString+URLEncoding.m in Sources */,
 				9585F1C1157FF7D100454EC8 /* NSURL+Base.m in Sources */,
@@ -429,29 +425,43 @@
 				9585F1CE157FF7D100454EC8 /* OAServiceTicket.m in Sources */,
 				9585F1D0157FF7D100454EC8 /* OAToken.m in Sources */,
 				9585F1D1157FF7D100454EC8 /* OATokenManager.m in Sources */,
-				3B282C85158124990056E7D2 /* CHInstagramDefinition.m in Sources */,
-				3B282C8815812A110056E7D2 /* CHFacebookDefinition.m in Sources */,
-				3B282D13158151DA0056E7D2 /* CHTwitterDefinition.m in Sources */,
+				9585F26415825EA200454EC8 /* CHAppDelegate.m in Sources */,
+				9585F26A15825EA200454EC8 /* CHViewController.m in Sources */,
+				9585F26E15825EA200454EC8 /* CHFacebookDefinition.m in Sources */,
+				9585F26F15825EA200454EC8 /* CHInstagramDefinition.m in Sources */,
+				9585F27015825EA200454EC8 /* CHTwitterDefinition.m in Sources */,
+				9585F27D15825EBE00454EC8 /* main.m in Sources */,
+				9585F28615825F3100454EC8 /* CHOAuthClient.m in Sources */,
+				9585F28715825F3100454EC8 /* CHOAuthViewController.m in Sources */,
+				9585F2BD15829FBB00454EC8 /* CHGoogleDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		953E5862157EADDD00DB9CBD /* InfoPlist.strings */ = {
+		9585F25815825EA200454EC8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				953E5863157EADDD00DB9CBD /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
+			path = /Users/colinhumber/Sandbox/CHOAuthViewController/CHOAuthViewController;
+			sourceTree = "<absolute>";
 		};
-		953E586B157EADDD00DB9CBD /* MainStoryboard.storyboard */ = {
+		9585F25A15825EA200454EC8 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				953E586C157EADDD00DB9CBD /* en */,
+				9585F25B15825EA200454EC8 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		9585F2B8158260F800454EC8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9585F2B9158260F800454EC8 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -508,8 +518,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CHOAuth2WebViewController/CHOAuthViewController-Prefix.pch";
-				INFOPLIST_FILE = "CHOAuth2WebViewController/CHOAuthViewController-Info.plist";
+				GCC_PREFIX_HEADER = "CHOAuthViewController/CHOAuthViewController-Prefix.pch";
+				INFOPLIST_FILE = "CHOAuthViewController/CHOAuthViewController-Info.plist";
 				PRODUCT_NAME = CHOAuthViewController;
 				WRAPPER_EXTENSION = app;
 			};
@@ -519,8 +529,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CHOAuth2WebViewController/CHOAuthViewController-Prefix.pch";
-				INFOPLIST_FILE = "CHOAuth2WebViewController/CHOAuthViewController-Info.plist";
+				GCC_PREFIX_HEADER = "CHOAuthViewController/CHOAuthViewController-Prefix.pch";
+				INFOPLIST_FILE = "CHOAuthViewController/CHOAuthViewController-Info.plist";
 				PRODUCT_NAME = CHOAuthViewController;
 				WRAPPER_EXTENSION = app;
 			};

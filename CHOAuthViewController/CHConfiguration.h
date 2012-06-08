@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DefaultCHOAuth2Configuration.h"
+//#import "DefaultCHOAuth2Configuration.h"
 
-@interface CHConfiguration : DefaultCHOAuth2Configuration
+@interface CHConfiguration : NSObject
 
 @end
