@@ -14,6 +14,7 @@
 #import "NSURL+QueryInspector.h"
 
 @interface CHOAuthClient () <UIWebViewDelegate>
+@property (nonatomic, strong) NSDictionary *additionalParameters;
 @property (nonatomic, strong) OAConsumer *consumer;
 @property (nonatomic, strong) OAToken *requestToken;
 @property (nonatomic, strong) id<OASignatureProviding> signatureProvider;
@@ -30,6 +31,7 @@
 
 @synthesize delegate = _delegate;
 @synthesize webView = _webView;
+@synthesize additionalParameters = _additionalParameters;
 @synthesize consumerKey = _consumerKey;
 @synthesize consumerSecret = _consumerSecret;
 @synthesize requestURL = _requestURL;
@@ -71,6 +73,7 @@
 }
 
 - (void)authorizeUsingWebView:(UIWebView *)webView additionalParameters:(NSDictionary *)additionalParameters {
+	self.additionalParameters = additionalParameters;
 	self.webView = webView;
 	self.webView.delegate = self;
 	[self tokenRequest];
@@ -114,18 +117,26 @@
 		[self tokenAuthorize];
 	}	
 	else {
-		NSLog(@"Ticket failed: %@", [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
+		NSLog(@"Ticket failed (status code: %d): %@", response.statusCode, [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
 	}
 }
 
 #pragma mark - Token Authorize
 - (void)tokenAuthorize {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?oauth_token=%@", _authorizeURL.absoluteString, _requestToken.key]];
+	NSString *baseURLString = [NSString stringWithFormat:@"%@?oauth_token=%@", _authorizeURL.absoluteString, _requestToken.key];
+	
+	if (self.additionalParameters) {
+		baseURLString = [baseURLString stringByAppendingFormat:@"&%@", [self.additionalParameters stringWithFormEncodedComponents]];
+	}
+	
+	NSURL *url = [NSURL URLWithString:baseURLString];
 	[self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 #pragma mark - Token Access
 - (void)tokenAccess{
+	self.requestToken.verifier = [self.authorizeResponseQueryVars objectForKey:@"oauth_verifier"];
+	
 	OAMutableURLRequest *accessRequest = [[OAMutableURLRequest alloc] initWithURL:_accessURL
 																		 consumer:_consumer
 																			token:_requestToken
@@ -163,7 +174,7 @@
 		}
 	}
 	else {
-		NSLog(@"Ticket failed: %@", [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
+		NSLog(@"Ticket failed (status code: %d): %@", response.statusCode, [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
 	}
 }
 
@@ -180,7 +191,24 @@
 		return NO;
 	}
 	
+	if ([self.delegate respondsToSelector:@selector(webView:shouldStartLoadWithRequest:navigationType:)]) {
+		[self.delegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
+	}
+	
 	return YES;
 }
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+	if ([self.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
+		[self.delegate webViewDidStartLoad:webView];
+	}
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+	if ([self.delegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
+		[self.delegate webViewDidFinishLoad:webView];
+	}
+}
+
 
 @end

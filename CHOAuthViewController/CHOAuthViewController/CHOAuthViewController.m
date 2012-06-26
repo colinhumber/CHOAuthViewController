@@ -21,6 +21,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 
 @interface CHOAuthViewController () <LROAuth2ClientDelegate, CHOAuthClientDelegate>
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
+@property (nonatomic, strong) UIActivityIndicatorView *spinner;
 
 @property (nonatomic, strong) id<CHOAuthServiceDefinition> serviceDefinition;
 @property (nonatomic, strong) LROAuth2Client *client;
@@ -36,6 +37,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 
 @synthesize webView = _webView;
 @synthesize navigationBar = _navigationBar;
+@synthesize spinner = _spinner;
 @synthesize serviceDefinition = _serviceDefinition;
 @synthesize client = _client;
 @synthesize legacyClient = _legacyClient;
@@ -79,6 +81,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 			_client.tokenURL = [NSURL URLWithString:[_serviceDefinition tokenURLPath]];
 		}
 
+		self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 		self.modalPresentationStyle = UIModalPresentationFormSheet;
 	}
 	
@@ -88,11 +91,12 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.navigationBar.topItem.title = [NSString stringWithFormat:@"Connect to %@", [self.serviceDefinition serviceName]];
+	self.navigationBar.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinner];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 	if (self.useLegacyOAuth) {
-		[self.legacyClient authorizeUsingWebView:self.webView];
+		[self.legacyClient authorizeUsingWebView:self.webView additionalParameters:[self.serviceDefinition additionalParameters]];
 	}
 	else {
 		[self.client authorizeUsingWebView:self.webView additionalParameters:[self.serviceDefinition additionalParameters]];		
@@ -149,6 +153,15 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[[NSNotificationCenter defaultCenter] postNotificationName:CHOAuthDidReceiveAccessTokenNotification object:client.accessToken userInfo:[self notificationUserInfo]];		
 	});
+}
+
+#pragma mark - UIWebViewDelegate
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+	[self.spinner startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+	[self.spinner stopAnimating];
 }
 
 @end

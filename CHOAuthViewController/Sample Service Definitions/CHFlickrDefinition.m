@@ -1,17 +1,17 @@
 //
-//  CHTwitterDefinition.m
+//  CHFlickrDefinition.m
 //  CHOAuthViewController
 //
-//  Created by Colin Humber on 6/7/12.
+//  Created by Colin Humber on 6/26/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CHTwitterDefinition.h"
+#import "CHFlickrDefinition.h"
 
-@implementation CHTwitterDefinition
+@implementation CHFlickrDefinition
 
 - (NSString *)serviceName {
-	return @"Twitter";
+	return @"Flickr";
 }
 
 - (CGFloat)oAuthVersion {
@@ -23,19 +23,19 @@
 }
 
 - (NSString *)clientSecret {
-	return @"7your client secret";
+	return @"your client secret";
 }
 
 - (NSString *)requestURLPath {
-	return @"https://api.twitter.com/oauth/request_token";
+	return @"http://www.flickr.com/services/oauth/request_token";
 }
 
 - (NSString *)authorizeURLPath {
-	return @"https://api.twitter.com/oauth/authorize";
+	return @"http://www.flickr.com/services/oauth/authorize";
 }
 
 - (NSString *)tokenURLPath {
-	return @"https://api.twitter.com/oauth/access_token";
+	return @"http://www.flickr.com/services/oauth/access_token";
 }
 
 - (NSString *)redirectURLPath {
@@ -43,7 +43,9 @@
 }
 
 - (NSDictionary *)additionalParameters {
-	return nil;
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+			@"read", @"perms", 
+			nil];
 }
 
 @end

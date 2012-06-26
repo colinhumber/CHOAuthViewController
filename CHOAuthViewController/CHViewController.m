@@ -12,6 +12,9 @@
 #import "CHFacebookDefinition.h"
 #import "CHTwitterDefinition.h"
 #import "CHGoogleDefinition.h"
+#import "CH500PixelsDefinition.h"
+#import "CHYammerDefinition.h"
+#import "CHFlickrDefinition.h"
 
 @interface CHViewController ()
 @property (nonatomic, strong) IBOutlet UILabel *accessTokenLabel;
@@ -23,7 +26,7 @@
 @synthesize accessTokenLabel;
 @synthesize accessToken;
 
-NSString* AccessTokenSavePath(NSString *serviceName) {
+NSString *AccessTokenSavePath(NSString *serviceName) {
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
 	return [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@OAuthAccessToken.cache", serviceName]];
 }

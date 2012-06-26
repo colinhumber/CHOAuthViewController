@@ -7,7 +7,6 @@
 //
 
 #import "CHAppDelegate.h"
-#import "CHConfiguration.h"
 
 @implementation CHAppDelegate
 

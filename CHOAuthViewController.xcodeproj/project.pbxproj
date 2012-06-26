@@ -16,6 +16,9 @@
 		953E58A1157EAE0E00DB9CBD /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E588E157EAE0E00DB9CBD /* NSDictionary+QueryString.m */; };
 		953E58A2157EAE0E00DB9CBD /* NSString+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5890157EAE0E00DB9CBD /* NSString+QueryString.m */; };
 		953E58A3157EAE0E00DB9CBD /* NSURL+QueryInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 953E5892157EAE0E00DB9CBD /* NSURL+QueryInspector.m */; };
+		957C931F159A0EA500E14D1D /* CHYammerDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 957C931E159A0EA500E14D1D /* CHYammerDefinition.m */; };
+		957C9323159A2B9400E14D1D /* CHFlickrDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 957C9322159A2B9400E14D1D /* CHFlickrDefinition.m */; };
+		957C9354159A4E0A00E14D1D /* Credentials in Resources */ = {isa = PBXBuildFile; fileRef = 957C9353159A4E0A00E14D1D /* Credentials */; };
 		9585F1BF157FF7D100454EC8 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F197157FF7D000454EC8 /* NSMutableURLRequest+Parameters.m */; };
 		9585F1C0157FF7D100454EC8 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F199157FF7D000454EC8 /* NSString+URLEncoding.m */; };
 		9585F1C1157FF7D100454EC8 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F19B157FF7D000454EC8 /* NSURL+Base.m */; };
@@ -47,6 +50,7 @@
 		9585F2B6158260BA00454EC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9585F25815825EA200454EC8 /* InfoPlist.strings */; };
 		9585F2BA158260F800454EC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9585F2B8158260F800454EC8 /* InfoPlist.strings */; };
 		9585F2BD15829FBB00454EC8 /* CHGoogleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */; };
+		95AC30B01598F1C8008DC274 /* CH500PixelsDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AC30AF1598F1C8008DC274 /* CH500PixelsDefinition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +71,11 @@
 		953E5890157EAE0E00DB9CBD /* NSString+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryString.m"; sourceTree = "<group>"; };
 		953E5891157EAE0E00DB9CBD /* NSURL+QueryInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryInspector.h"; sourceTree = "<group>"; };
 		953E5892157EAE0E00DB9CBD /* NSURL+QueryInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryInspector.m"; sourceTree = "<group>"; };
+		957C931D159A0EA500E14D1D /* CHYammerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHYammerDefinition.h; sourceTree = "<group>"; };
+		957C931E159A0EA500E14D1D /* CHYammerDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHYammerDefinition.m; sourceTree = "<group>"; };
+		957C9321159A2B9400E14D1D /* CHFlickrDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHFlickrDefinition.h; sourceTree = "<group>"; };
+		957C9322159A2B9400E14D1D /* CHFlickrDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHFlickrDefinition.m; sourceTree = "<group>"; };
+		957C9353159A4E0A00E14D1D /* Credentials */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credentials; sourceTree = "<group>"; };
 		9585F196157FF7D000454EC8 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		9585F197157FF7D000454EC8 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
 		9585F198157FF7D000454EC8 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
@@ -109,8 +118,6 @@
 		9585F1BE157FF7D100454EC8 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		9585F24815825EA200454EC8 /* CHAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
 		9585F24915825EA200454EC8 /* CHAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
-		9585F24A15825EA200454EC8 /* CHConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHConfiguration.h; sourceTree = "<group>"; };
-		9585F24B15825EA200454EC8 /* CHConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHConfiguration.m; sourceTree = "<group>"; };
 		9585F25615825EA200454EC8 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
 		9585F25715825EA200454EC8 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
 		9585F25B15825EA200454EC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -133,6 +140,8 @@
 		9585F2B9158260F800454EC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = CHOAuthViewController/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		9585F2BB15829FBB00454EC8 /* CHGoogleDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGoogleDefinition.h; sourceTree = "<group>"; };
 		9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGoogleDefinition.m; sourceTree = "<group>"; };
+		95AC30AE1598F1C8008DC274 /* CH500PixelsDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CH500PixelsDefinition.h; sourceTree = "<group>"; };
+		95AC30AF1598F1C8008DC274 /* CH500PixelsDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CH500PixelsDefinition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,8 +304,6 @@
 				9585F27E15825F3100454EC8 /* CHOAuthViewController */,
 				9585F24815825EA200454EC8 /* CHAppDelegate.h */,
 				9585F24915825EA200454EC8 /* CHAppDelegate.m */,
-				9585F24A15825EA200454EC8 /* CHConfiguration.h */,
-				9585F24B15825EA200454EC8 /* CHConfiguration.m */,
 				9585F25615825EA200454EC8 /* CHViewController.h */,
 				9585F25715825EA200454EC8 /* CHViewController.m */,
 				9585F25A15825EA200454EC8 /* MainStoryboard.storyboard */,
@@ -318,6 +325,13 @@
 				9585F26315825EA200454EC8 /* CHTwitterDefinition.m */,
 				9585F2BB15829FBB00454EC8 /* CHGoogleDefinition.h */,
 				9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */,
+				95AC30AE1598F1C8008DC274 /* CH500PixelsDefinition.h */,
+				95AC30AF1598F1C8008DC274 /* CH500PixelsDefinition.m */,
+				957C931D159A0EA500E14D1D /* CHYammerDefinition.h */,
+				957C931E159A0EA500E14D1D /* CHYammerDefinition.m */,
+				957C9321159A2B9400E14D1D /* CHFlickrDefinition.h */,
+				957C9322159A2B9400E14D1D /* CHFlickrDefinition.m */,
+				957C9353159A4E0A00E14D1D /* Credentials */,
 			);
 			path = "Sample Service Definitions";
 			sourceTree = "<group>";
@@ -391,6 +405,7 @@
 				9585F2B5158260AF00454EC8 /* MainStoryboard.storyboard in Resources */,
 				9585F28815825F3100454EC8 /* CHOAuthViewController.xib in Resources */,
 				9585F2BA158260F800454EC8 /* InfoPlist.strings in Resources */,
+				957C9354159A4E0A00E14D1D /* Credentials in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +449,9 @@
 				9585F28615825F3100454EC8 /* CHOAuthClient.m in Sources */,
 				9585F28715825F3100454EC8 /* CHOAuthViewController.m in Sources */,
 				9585F2BD15829FBB00454EC8 /* CHGoogleDefinition.m in Sources */,
+				95AC30B01598F1C8008DC274 /* CH500PixelsDefinition.m in Sources */,
+				957C931F159A0EA500E14D1D /* CHYammerDefinition.m in Sources */,
+				957C9323159A2B9400E14D1D /* CHFlickrDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

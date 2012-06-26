@@ -10,7 +10,7 @@
 
 @protocol CHOAuthServiceDefinition <NSObject>
 
-// name of the service being defined. Used to generate the save path for the access token
+// name of the service being defined. Used to generate the save path for the access token and is displayed on the popup's navigation bar
 - (NSString *)serviceName;
 
 // oAuth version supported by the service. Must be either 1.0 or 2.0.
@@ -36,7 +36,7 @@
 
 @optional
 // dictionary of parameters used during the authentication process. Generally used to define scope permissions, but may include any arbitrary
-// values as required by the service being defined
+// values as required by the defined service
 - (NSDictionary *)additionalParameters;
 
 @end

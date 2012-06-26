@@ -10,7 +10,7 @@
 
 @class CHOAuthClient;
 
-@protocol CHOAuthClientDelegate <NSObject>
+@protocol CHOAuthClientDelegate <UIWebViewDelegate>
 
 @required
 - (void)oAuthLegacyClientDidReceiveAccessToken:(CHOAuthClient *)client;

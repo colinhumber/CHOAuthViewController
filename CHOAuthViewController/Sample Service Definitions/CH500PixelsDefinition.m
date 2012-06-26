@@ -1,17 +1,17 @@
 //
-//  CHTwitterDefinition.m
+//  CH500PixelsDefinition.m
 //  CHOAuthViewController
 //
-//  Created by Colin Humber on 6/7/12.
+//  Created by Colin Humber on 6/25/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CHTwitterDefinition.h"
+#import "CH500PixelsDefinition.h"
 
-@implementation CHTwitterDefinition
+@implementation CH500PixelsDefinition
 
 - (NSString *)serviceName {
-	return @"Twitter";
+	return @"500px";
 }
 
 - (CGFloat)oAuthVersion {
@@ -23,23 +23,23 @@
 }
 
 - (NSString *)clientSecret {
-	return @"7your client secret";
+	return @"your client secret";
 }
 
 - (NSString *)requestURLPath {
-	return @"https://api.twitter.com/oauth/request_token";
+	return @"https://api.500px.com/v1/oauth/request_token";
 }
 
 - (NSString *)authorizeURLPath {
-	return @"https://api.twitter.com/oauth/authorize";
+	return @"https://api.500px.com/v1/oauth/authorize";
 }
 
 - (NSString *)tokenURLPath {
-	return @"https://api.twitter.com/oauth/access_token";
+	return @"https://api.500px.com/v1/oauth/access_token";
 }
 
 - (NSString *)redirectURLPath {
-	return @"http://example.com";
+	return @"http://phototest.com/auth";
 }
 
 - (NSDictionary *)additionalParameters {

@@ -1,21 +1,21 @@
 //
-//  CHTwitterDefinition.m
+//  CHYammerDefinition.m
 //  CHOAuthViewController
 //
-//  Created by Colin Humber on 6/7/12.
+//  Created by Colin Humber on 6/26/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CHTwitterDefinition.h"
+#import "CHYammerDefinition.h"
 
-@implementation CHTwitterDefinition
+@implementation CHYammerDefinition
 
 - (NSString *)serviceName {
-	return @"Twitter";
+	return @"Yammer";
 }
 
 - (CGFloat)oAuthVersion {
-	return 1.0;
+	return 2.0;
 }
 
 - (NSString *)clientID {
@@ -23,19 +23,19 @@
 }
 
 - (NSString *)clientSecret {
-	return @"7your client secret";
+	return @"your client secret";
 }
 
 - (NSString *)requestURLPath {
-	return @"https://api.twitter.com/oauth/request_token";
+	return @"https://www.yammer.com/oauth/request_token";
 }
 
 - (NSString *)authorizeURLPath {
-	return @"https://api.twitter.com/oauth/authorize";
+	return @"https://www.yammer.com/dialog/oauth";
 }
 
 - (NSString *)tokenURLPath {
-	return @"https://api.twitter.com/oauth/access_token";
+	return @"https://www.yammer.com/oauth2/access_token";
 }
 
 - (NSString *)redirectURLPath {
