@@ -27,7 +27,7 @@
 }
 
 - (NSString *)requestURLPath {
-	return @"https://www.yammer.com/oauth/request_token";
+	return nil;
 }
 
 - (NSString *)authorizeURLPath {
