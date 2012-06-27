@@ -31,7 +31,8 @@
 }
 
 - (NSString *)authorizeURLPath {
-	return @"https://graph.facebook.com/oauth/authorize";
+//	return @"https://graph.facebook.com/oauth/authorize";
+	return @"https://m.facebook.com/dialog/oauth";
 }
 
 - (NSString *)tokenURLPath {

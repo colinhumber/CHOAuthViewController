@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B01D3AD159935E500075572 /* CHYammerDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01D3AC159935E500075572 /* CHYammerDefinition.m */; };
 		953E585A157EADDD00DB9CBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E5859157EADDD00DB9CBD /* UIKit.framework */; };
 		953E585C157EADDD00DB9CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585B157EADDD00DB9CBD /* Foundation.framework */; };
 		953E585E157EADDD00DB9CBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585D157EADDD00DB9CBD /* CoreGraphics.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B01D3AB159935E500075572 /* CHYammerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHYammerDefinition.h; sourceTree = "<group>"; };
+		0B01D3AC159935E500075572 /* CHYammerDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHYammerDefinition.m; sourceTree = "<group>"; };
 		953E5855157EADDD00DB9CBD /* CHOAuthViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHOAuthViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		953E5859157EADDD00DB9CBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		953E585B157EADDD00DB9CBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -318,6 +321,8 @@
 				9585F26315825EA200454EC8 /* CHTwitterDefinition.m */,
 				9585F2BB15829FBB00454EC8 /* CHGoogleDefinition.h */,
 				9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */,
+				0B01D3AB159935E500075572 /* CHYammerDefinition.h */,
+				0B01D3AC159935E500075572 /* CHYammerDefinition.m */,
 			);
 			path = "Sample Service Definitions";
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 				9585F28615825F3100454EC8 /* CHOAuthClient.m in Sources */,
 				9585F28715825F3100454EC8 /* CHOAuthViewController.m in Sources */,
 				9585F2BD15829FBB00454EC8 /* CHGoogleDefinition.m in Sources */,
+				0B01D3AD159935E500075572 /* CHYammerDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

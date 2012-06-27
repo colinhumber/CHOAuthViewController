@@ -12,6 +12,8 @@
 #import "CHFacebookDefinition.h"
 #import "CHTwitterDefinition.h"
 #import "CHGoogleDefinition.h"
+#import "CHYammerDefinition.h"
+#import "LROAuth2AccessToken.h"
 
 @interface CHViewController ()
 @property (nonatomic, strong) IBOutlet UILabel *accessTokenLabel;
@@ -70,6 +72,11 @@ NSString* AccessTokenSavePath(NSString *serviceName) {
 - (IBAction)loginToGoogle {
 	self.accessToken = nil;
 	[self loginToService:[[CHGoogleDefinition alloc] init]];
+}
+
+- (IBAction)loginToYammer {
+    self.accessToken = nil;
+    [self loginToService:[[CHYammerDefinition alloc] init]];
 }
 
 - (IBAction)refreshCurrentToken {
