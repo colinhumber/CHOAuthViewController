@@ -79,6 +79,11 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 			_client.delegate = self;
 			_client.userURL = [NSURL URLWithString:[_serviceDefinition authorizeURLPath]];
 			_client.tokenURL = [NSURL URLWithString:[_serviceDefinition tokenURLPath]];
+			
+			// If defined, pass an overriding path to the access token.
+			if ([_serviceDefinition respondsToSelector:@selector(accessTokenKeyPath)]) {
+				_client.accessTokenKeyPath = _serviceDefinition.accessTokenKeyPath;
+			}
 		}
 
 		self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -99,7 +104,11 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 		[self.legacyClient authorizeUsingWebView:self.webView additionalParameters:[self.serviceDefinition additionalParameters]];
 	}
 	else {
-		[self.client authorizeUsingWebView:self.webView additionalParameters:[self.serviceDefinition additionalParameters]];		
+		NSDictionary *additionalParameters = nil;
+		if ([self.serviceDefinition respondsToSelector:@selector(additionalParameters)]) {
+			additionalParameters = [self.serviceDefinition additionalParameters];		
+		}
+		[self.client authorizeUsingWebView:self.webView additionalParameters:additionalParameters];		
 	}
 }
 
