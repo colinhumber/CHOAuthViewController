@@ -13,7 +13,7 @@
 #import "CHTwitterDefinition.h"
 #import "CHGoogleDefinition.h"
 #import "CHYammerDefinition.h"
-#import "LROAuth2AccessToken.h"
+#import <LROAuth2Client/LROAuth2AccessToken.h>
 
 @interface CHViewController ()
 @property (nonatomic, strong) IBOutlet UILabel *accessTokenLabel;

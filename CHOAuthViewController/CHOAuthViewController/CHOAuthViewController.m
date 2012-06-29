@@ -8,8 +8,8 @@
 
 #import "CHOAuthViewController.h"
 #import "CHOAuthServiceDefinition.h"
-#import "LROAuth2Client.h"
-#import "LROAuth2ClientDelegate.h"
+#import <LROAuth2Client/LROAuth2Client.h>
+#import <LROAuth2Client/LROAuth2ClientDelegate.h>
 #import "CHOAuthClient.h"
 #import "CHOAuthClientDelegate.h"
 

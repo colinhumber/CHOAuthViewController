@@ -8,10 +8,10 @@
 
 #import "CHOAuthClient.h"
 #import "OAuthConsumer.h"
-#import "LRURLRequestOperation.h"
-#import "LROAuth2AccessToken.h"
-#import "NSDictionary+QueryString.h"
-#import "NSURL+QueryInspector.h"
+#import <LROAuth2Client/LRURLRequestOperation.h>
+#import <LROAuth2Client/LROAuth2AccessToken.h>
+#import <LROAuth2Client/NSDictionary+QueryString.h>
+#import <LROAuth2Client/NSURL+QueryInspector.h>
 
 @interface CHOAuthClient () <UIWebViewDelegate>
 @property (nonatomic, strong) OAConsumer *consumer;
