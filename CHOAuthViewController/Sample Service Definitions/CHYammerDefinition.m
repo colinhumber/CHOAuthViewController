@@ -41,10 +41,8 @@
 	return @"https://www.yammer.com/authorize";
 }
 
-- (NSDictionary *)additionalParameters {
-    return nil;
-	return [NSDictionary dictionaryWithObjectsAndKeys:
-			@"token", @"response_type",
-			nil];
+-(NSString *) accessTokenKeyPath {
+	return @"access_token.token";
 }
+
 @end

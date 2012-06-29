@@ -39,4 +39,8 @@
 // values as required by the service being defined
 - (NSDictionary *)additionalParameters;
 
+// If the access token cannot be retrieved from the "access_token" property then this can be specified to define a different path in the response.
+// See Yammer for an instance where the access token is actually a json object and the actual access token is deeper in.
+-(NSString *) accessTokenKeyPath;
+
 @end
