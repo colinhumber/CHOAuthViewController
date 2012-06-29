@@ -3,7 +3,7 @@
 //  CHOAuthViewController
 //
 //  Created by Colin Humber on 6/25/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Colin Humber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -3,7 +3,7 @@
 //  CHOAuth2WebViewController
 //
 //  Created by Colin Humber on 6/5/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Colin Humber. All rights reserved.
 //
 
 #import "CHAppDelegate.h"

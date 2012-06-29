@@ -26,9 +26,9 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 @property (nonatomic, strong) id<CHOAuthServiceDefinition> serviceDefinition;
 @property (nonatomic, strong) LROAuth2Client *client;
 @property (nonatomic, strong) CHOAuthClient *legacyClient;
+@property (nonatomic, readonly) BOOL useLegacyOAuth;
 
 - (IBAction)cancel;
-- (BOOL)useLegacyOAuth;
 - (NSDictionary *)notificationUserInfo;
 @end
 
@@ -41,10 +41,8 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 @synthesize serviceDefinition = _serviceDefinition;
 @synthesize client = _client;
 @synthesize legacyClient = _legacyClient;
+@dynamic useLegacyOAuth;
 
-- (BOOL)useLegacyOAuth {
-	return [self.serviceDefinition oAuthVersion] == 1.0;
-}
 
 - (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition {
 	self = [super initWithNibName:@"CHOAuthViewController" bundle:nil];
@@ -80,9 +78,8 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 			_client.userURL = [NSURL URLWithString:[_serviceDefinition authorizeURLPath]];
 			_client.tokenURL = [NSURL URLWithString:[_serviceDefinition tokenURLPath]];
 			
-			// If defined, pass an overriding path to the access token.
 			if ([_serviceDefinition respondsToSelector:@selector(accessTokenKeyPath)]) {
-				_client.accessTokenKeyPath = _serviceDefinition.accessTokenKeyPath;
+				_client.accessTokenKeyPath = [self.serviceDefinition accessTokenKeyPath];
 			}
 		}
 
@@ -100,14 +97,15 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+	NSDictionary *additionalParameters = nil;
+	if ([self.serviceDefinition respondsToSelector:@selector(additionalParameters)]) {
+		additionalParameters = [self.serviceDefinition additionalParameters];		
+	}
+
 	if (self.useLegacyOAuth) {
 		[self.legacyClient authorizeUsingWebView:self.webView additionalParameters:[self.serviceDefinition additionalParameters]];
 	}
 	else {
-		NSDictionary *additionalParameters = nil;
-		if ([self.serviceDefinition respondsToSelector:@selector(additionalParameters)]) {
-			additionalParameters = [self.serviceDefinition additionalParameters];		
-		}
 		[self.client authorizeUsingWebView:self.webView additionalParameters:additionalParameters];		
 	}
 }
@@ -126,7 +124,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 	NSAssert(self.serviceDefinition != nil, @"A service definition must be provided before refreshing an access token.");
 	
 	if (self.useLegacyOAuth) {
-		NSLog(@"OAuth 1.0 does not support refreshing access token.");
+		NSLog(@"OAuth 1.0(A) does not support refreshing access token.");
 	}
 	else {
 		[self.client refreshAccessToken:accessToken];		
@@ -135,6 +133,11 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 
 - (IBAction)cancel {
 	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Dynamic Properties
+- (BOOL)useLegacyOAuth {
+	return [self.serviceDefinition oAuthVersion] == 1.0;
 }
 
 - (NSDictionary *)notificationUserInfo {

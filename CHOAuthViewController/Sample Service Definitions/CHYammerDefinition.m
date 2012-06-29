@@ -3,11 +3,12 @@
 //  CHOAuthViewController
 //
 //  Created by Colin Humber on 6/26/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Colin Humber. All rights reserved.
 
 #import "CHYammerDefinition.h"
 
 @implementation CHYammerDefinition
+
 - (NSString *)serviceName {
 	return @"Yammer";
 }
@@ -40,17 +41,12 @@
 	return @"http://example.com";
 }
 
-- (NSString *)redirectURLPath {
-	return @"https://www.yammer.com/authorize";
-}
-
-- (NSString *) accessTokenKeyPath {
+- (NSString *)accessTokenKeyPath {
 	return @"access_token.token";
 }
 
 - (NSDictionary *)additionalParameters {
 	return nil;
 }
-
 
 @end
