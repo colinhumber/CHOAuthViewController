@@ -35,12 +35,12 @@
 		951540E715A35DA100148C85 /* OATestServer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 951540BD15A35DA100148C85 /* OATestServer.rb */; };
 		951540E815A35DA100148C85 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 951540BF15A35DA100148C85 /* OAToken.m */; };
 		951540E915A35DA100148C85 /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 951540C115A35DA100148C85 /* OATokenManager.m */; };
+		951540F115A3648D00148C85 /* Credentials in Resources */ = {isa = PBXBuildFile; fileRef = 951540F015A3648D00148C85 /* Credentials */; };
 		953E585A157EADDD00DB9CBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E5859157EADDD00DB9CBD /* UIKit.framework */; };
 		953E585C157EADDD00DB9CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585B157EADDD00DB9CBD /* Foundation.framework */; };
 		953E585E157EADDD00DB9CBD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585D157EADDD00DB9CBD /* CoreGraphics.framework */; };
 		957C931F159A0EA500E14D1D /* CHYammerDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 957C931E159A0EA500E14D1D /* CHYammerDefinition.m */; };
 		957C9323159A2B9400E14D1D /* CHFlickrDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 957C9322159A2B9400E14D1D /* CHFlickrDefinition.m */; };
-		957C9354159A4E0A00E14D1D /* Credentials in Resources */ = {isa = PBXBuildFile; fileRef = 957C9353159A4E0A00E14D1D /* Credentials */; };
 		9585F26415825EA200454EC8 /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F24915825EA200454EC8 /* CHAppDelegate.m */; };
 		9585F26A15825EA200454EC8 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F25715825EA200454EC8 /* CHViewController.m */; };
 		9585F26E15825EA200454EC8 /* CHFacebookDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F25F15825EA200454EC8 /* CHFacebookDefinition.m */; };
@@ -116,6 +116,7 @@
 		951540C215A35DA100148C85 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		951540EE15A35E7400148C85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = CHOAuthViewController/Info.plist; sourceTree = SOURCE_ROOT; };
 		951540EF15A35E7400148C85 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = CHOAuthViewController/Prefix.pch; sourceTree = SOURCE_ROOT; };
+		951540F015A3648D00148C85 /* Credentials */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credentials; sourceTree = "<group>"; };
 		953E5855157EADDD00DB9CBD /* CHOAuthViewController Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHOAuthViewController Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		953E5859157EADDD00DB9CBD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		953E585B157EADDD00DB9CBD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,7 +125,6 @@
 		957C931E159A0EA500E14D1D /* CHYammerDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHYammerDefinition.m; sourceTree = "<group>"; };
 		957C9321159A2B9400E14D1D /* CHFlickrDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHFlickrDefinition.h; sourceTree = "<group>"; };
 		957C9322159A2B9400E14D1D /* CHFlickrDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHFlickrDefinition.m; sourceTree = "<group>"; };
-		957C9353159A4E0A00E14D1D /* Credentials */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credentials; sourceTree = "<group>"; };
 		9585F24815825EA200454EC8 /* CHAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
 		9585F24915825EA200454EC8 /* CHAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
 		9585F25615825EA200454EC8 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
@@ -345,7 +345,7 @@
 				957C931E159A0EA500E14D1D /* CHYammerDefinition.m */,
 				957C9321159A2B9400E14D1D /* CHFlickrDefinition.h */,
 				957C9322159A2B9400E14D1D /* CHFlickrDefinition.m */,
-				957C9353159A4E0A00E14D1D /* Credentials */,
+				951540F015A3648D00148C85 /* Credentials */,
 			);
 			path = "Sample Service Definitions";
 			sourceTree = "<group>";
@@ -404,9 +404,9 @@
 				9585F2B6158260BA00454EC8 /* InfoPlist.strings in Resources */,
 				9585F2B5158260AF00454EC8 /* MainStoryboard.storyboard in Resources */,
 				9585F2BA158260F800454EC8 /* InfoPlist.strings in Resources */,
-				957C9354159A4E0A00E14D1D /* Credentials in Resources */,
 				951540C915A35DA100148C85 /* CHOAuthViewController.xib in Resources */,
 				951540E715A35DA100148C85 /* OATestServer.rb in Resources */,
+				951540F115A3648D00148C85 /* Credentials in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

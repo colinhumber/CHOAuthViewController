@@ -52,31 +52,36 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 		
 		self.serviceDefinition = serviceDefinition;
 		
+		NSURL *requestURL = [NSURL URLWithString:[_serviceDefinition requestURLPath]];
+		NSURL *authorizeURL = [NSURL URLWithString:[_serviceDefinition authorizeURLPath]];
+		NSURL *tokenURL = [NSURL URLWithString:[_serviceDefinition tokenURLPath]];
+		NSURL *redirectURL = [NSURL URLWithString:[_serviceDefinition redirectURLPath]];
+		
 		NSAssert([serviceDefinition serviceName] != nil, @"A service name must be provided");
 		NSAssert([serviceDefinition clientID] != nil, @"A client ID must be provided");
 		NSAssert([serviceDefinition clientSecret] != nil, @"A client secret must be provided");
-		NSAssert([serviceDefinition redirectURLPath] != nil, @"A valid redirect URL path must be provided");
-		NSAssert([serviceDefinition authorizeURLPath] != nil, @"A valid authorize URL path must be provided");
-		NSAssert([serviceDefinition tokenURLPath] != nil, @"A valid token URL path must be provided");
+		NSAssert(redirectURL != nil, @"A valid redirect URL path must be provided");
+		NSAssert(authorizeURL != nil, @"A valid authorize URL path must be provided");
+		NSAssert(tokenURL != nil, @"A valid token URL path must be provided");
 		
 		if (self.useLegacyOAuth) {
-			NSAssert([serviceDefinition requestURLPath] != nil, @"A valid request URL path must be provided");
+			NSAssert(requestURL != nil, @"A valid request URL path must be provided");
 		
 			self.legacyClient = [[CHOAuthClient alloc] initWithConsumerKey:[_serviceDefinition clientID] 
 															consumerSecret:[_serviceDefinition clientSecret] 
-																requestURL:[NSURL URLWithString:[_serviceDefinition requestURLPath]]
-															  authorizeURL:[NSURL URLWithString:[_serviceDefinition authorizeURLPath]]
-																 accessURL:[NSURL URLWithString:[_serviceDefinition tokenURLPath]]
-															   callbackURL:[NSURL URLWithString:[_serviceDefinition redirectURLPath]]];
+																requestURL:requestURL
+															  authorizeURL:authorizeURL
+																 accessURL:tokenURL
+															   callbackURL:redirectURL];
 			self.legacyClient.delegate = self;
 		}
 		else {
 			self.client = [[LROAuth2Client alloc] initWithClientID:[_serviceDefinition clientID] 
 															secret:[_serviceDefinition clientSecret]
-													   redirectURL:[NSURL URLWithString:[_serviceDefinition redirectURLPath]]];
+													   redirectURL:requestURL];
 			_client.delegate = self;
-			_client.userURL = [NSURL URLWithString:[_serviceDefinition authorizeURLPath]];
-			_client.tokenURL = [NSURL URLWithString:[_serviceDefinition tokenURLPath]];
+			_client.userURL = authorizeURL;
+			_client.tokenURL = tokenURL;
 			
 			if ([_serviceDefinition respondsToSelector:@selector(accessTokenKeyPath)]) {
 				_client.accessTokenKeyPath = [self.serviceDefinition accessTokenKeyPath];
