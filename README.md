@@ -57,7 +57,7 @@ Finally, if you notification callback, retrieve the appropriate OAuth 1.0(A) or 
 ```
 
 ## Credits
-CHOAuthViewController uses projects by Jon Crosby [OAuthConsumer](https://github.com/colinhumber/oauthconsumer) and Luke Redpath [LROAuth2Client](https://github.com/drekka/LROAuth2Client) for handling the internals of authenticating against OAuth services. 
+CHOAuthViewController uses projects by Jon Crosby [(OAuthConsumer)](https://github.com/colinhumber/oauthconsumer) (modified to use ARC) and Luke Redpath [(LROAuth2Client)](https://github.com/drekka/LROAuth2Client) for handling the internals of authenticating against OAuth services. 
 
 ## License
 CHOAuthViewController is available under the MIT license. See the LICENSE file for more info.
