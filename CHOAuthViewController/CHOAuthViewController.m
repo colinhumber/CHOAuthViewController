@@ -20,7 +20,6 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 @protocol CHOAuthClient;
 
 @interface CHOAuthViewController () <LROAuth2ClientDelegate, CHOAuthClientDelegate>
-@property (nonatomic, weak) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) UIActivityIndicatorView *spinner;
 
 @property (nonatomic, strong) id<CHOAuthServiceDefinition> serviceDefinition;
@@ -45,7 +44,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 
 
 - (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition {
-	self = [super initWithNibName:@"CHOAuthViewController" bundle:nil];
+	self = [super init];
 	
 	if (self) {
 		NSAssert(serviceDefinition != nil, @"Cannot provide a nil service definition");
@@ -88,17 +87,41 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 			}
 		}
 
-		self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 		self.modalPresentationStyle = UIModalPresentationFormSheet;
 	}
 	
 	return self;
 }
 
+- (void)loadView {
+	if (_webView) {
+		self.view = _webView;
+	}
+	else {
+		CGRect applicationBounds = CGRectOffset([UIScreen mainScreen].applicationFrame, 0, -20);
+		self.view = [[UIView alloc] initWithFrame:applicationBounds];
+
+		self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+
+		_navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, applicationBounds.size.width, 44)];
+		_navigationBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+		
+		UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:[NSString stringWithFormat:@"Connect to %@", [self.serviceDefinition serviceName]]];
+		navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
+		navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinner];
+		[_navigationBar pushNavigationItem:navigationItem animated:NO];
+		[self.view addSubview:_navigationBar];
+		
+		self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 44, applicationBounds.size.width, applicationBounds.size.height - 44)];
+		_webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | 
+									UIViewAutoresizingFlexibleHeight;
+		
+		[self.view addSubview:_webView];
+	}
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.navigationBar.topItem.title = [NSString stringWithFormat:@"Connect to %@", [self.serviceDefinition serviceName]];
-	self.navigationBar.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinner];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -113,11 +136,6 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 	else {
 		[self.client authorizeUsingWebView:self.webView additionalParameters:additionalParameters];		
 	}
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-	self.webView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

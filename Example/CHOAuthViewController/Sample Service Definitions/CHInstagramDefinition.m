@@ -19,11 +19,11 @@
 }
 
 - (NSString *)clientID {
-	return @"your client ID";
+	return @"d2eb5be8b572404383d6a3ac94f654c4";
 }
 
 - (NSString *)clientSecret {
-	return @"your client secret";
+	return @"3849d8323799403580eb80beda7b152f";
 }
 
 - (NSString *)requestURLPath {
