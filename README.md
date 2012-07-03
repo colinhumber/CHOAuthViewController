@@ -56,6 +56,8 @@ Finally, if you notification callback, retrieve the appropriate OAuth 1.0(A) or 
 }
 ```
 
+Each access token object conforms to the NSCoding protocol and can be archived to disk, saved in NSUserDefaults, saved to Keychain, etc.
+
 ## Credits
 CHOAuthViewController uses projects by Jon Crosby [(OAuthConsumer)](https://github.com/colinhumber/oauthconsumer) (modified to use ARC) and Luke Redpath [(LROAuth2Client)](https://github.com/drekka/LROAuth2Client) for handling the internals of authenticating against OAuth services. 
 
