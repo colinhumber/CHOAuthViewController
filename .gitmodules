@@ -1,6 +1,6 @@
-[submodule "Vendor/LROAuth2Client"]
-	path = Vendor/LROAuth2Client
+[submodule "CHOAuthViewController/Vendor/LROAuth2Client"]
+	path = CHOAuthViewController/Vendor/LROAuth2Client
 	url = https://github.com/drekka/LROAuth2Client.git
-[submodule "Vendor/OAuthConsumer"]
-	path = Vendor/OAuthConsumer
+[submodule "CHOAuthViewController/Vendor/OAuthConsumer"]
+	path = CHOAuthViewController/Vendor/OAuthConsumer
 	url = https://github.com/colinhumber/oauthconsumer.git
