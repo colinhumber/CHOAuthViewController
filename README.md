@@ -38,7 +38,6 @@ Finally, if you notification callback, retrieve the appropriate OAuth 1.0(A) or 
 
 ```objective-c
 - (void)didReceiveAccessToken:(NSNotification *)note {
-
 	id<CHOAuthServiceDefinition> serviceDefinition = [note.userInfo objectForKey:CHServiceDefinitionKey];
 		
 	if ([serviceDefinition oAuthVersion] == 1.0) {
