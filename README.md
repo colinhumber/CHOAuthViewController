@@ -1,6 +1,6 @@
 ## What is CHOAuthViewController?
 
-CHOAuthViewController is a simple and easy way to authenticate and authorize OAuth 1.0(A) and OAuth 2 services. Authenticating is as simple as defining an OAuth service, creating and presenting the provided view controller, and registering for notifications when the user has completed authenticating and an OAuth access token is available. It wraps two mature OAuth projects for iOS and provides a simple UI, making implementing OAuth quick and easy. CHOAuthViewController is ARC ready and requires iOS 5.
+CHOAuthViewController is a simple and easy way to authenticate and authorize OAuth 1.0(A) and OAuth 2 services. Authenticating is as simple as defining an OAuth service, creating and presenting the provided view controller, and registering for notifications when the user has completed authenticating and an OAuth access token is available. It wraps two mature OAuth projects for iOS and provides a simple UI, making implementing OAuth quick and easy. CHOAuthViewController is ARC ready and requires iOS 5. This is still very much a work in progress but it is being used in a number of personal apps. Any feedback is definitely welcome!
 
 ## How do I use it?
 
