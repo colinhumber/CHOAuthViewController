@@ -1,6 +1,6 @@
 ## What is CHOAuthViewController?
 
-CHOAuthViewController is a simple and easy way to authenticate and authorize OAuth 1.0(A) and OAuth 2 services. Authenticating is as simple as defining an OAuth service, creating and presenting the provided view controller, and registering for notifications when the user has completed authenticating and an OAuth access token is available. It wraps two mature OAuth projects for iOS and provides a simple UI, making implementing OAuth quick and easy. CHOAuthViewController is ARC ready and requires iOS 5.
+CHOAuthViewController is a simple and easy way to authenticate and authorize OAuth 1.0(A) and OAuth 2 services. Authenticating is as simple as defining an OAuth service, creating and presenting the provided view controller, and registering for notifications when the user has completed authenticating and an OAuth access token is available. It wraps two mature OAuth projects for iOS and provides a simple UI, making implementing OAuth quick and easy.
 
 ## How do I use it?
 
@@ -25,7 +25,7 @@ Next, register to receive a notification when the access token has been returned
 ```objective-c
 - (void)viewDidLoad {
   [[NSNotificationCenter defaultCenter] addObserver:self 
-											 selector:@selector(didReceiveAccessToken:) name:CHOAuthDidReceiveAccessTokenNotification object:nil];
+										   selector:@selector(didReceiveAccessToken:) name:CHOAuthDidReceiveAccessTokenNotification object:nil];
 }
 ```
 
@@ -33,9 +33,10 @@ Next, create an instance of CHOAuthViewController with an instance of your servi
 
 ```objective-c
 - (void)loginToInstagram {
-	CHInstagramDefinition *instagram = [[CHInstagramDefinition alloc] init];	// CHInstagramDefinition is a class conforming to the CHOAuthServiceDefinition protocol
-	CHOAuthViewController *oauthController = [[CHOAuthViewController alloc] initWithServiceDefinition:service];
-	[self presentViewController:oauthController animated:YES completion:nil];
+	// CHInstagramDefinition is a class conforming to the CHOAuthServiceDefinition protocol
+	CHInstagramDefinition *instagramDefinition = [[CHInstagramDefinition alloc] init];
+	CHOAuthViewController *oAuthController = [[CHOAuthViewController alloc] initWithServiceDefinition:instagramDefinition];
+	[self presentViewController:oAuthController animated:YES completion:nil];
 }
 ```
 
@@ -58,8 +59,20 @@ Finally, if you notification callback, retrieve the appropriate OAuth 1.0(A) or 
 
 Each access token object conforms to the NSCoding protocol and can be archived to disk, saved in NSUserDefaults, saved to Keychain, etc.
 
+## Requirements
+
+CHOAuthViewController is ARC ready and requires iOS 5+.
+
+If you are using CHOAuthViewController in an app that is not using ARC, you will need to set the ```-fobjc-arc``` compiler flag on all CHOAuthViewController source files, including the OAuthConsumer and LROAuth2Client classes. This can be done by going to the desired target, selecting Build Phases, and expanding the Compile Sources step. Select all CHOAuthViewController, OAuthConsumer, and LROAuth2Client classes, press Enter, and insert ```-fobjc-arc``` in the popup, and click 'Done'.
+
+## To do
+
+- abstract the type of token returned from the service into a single token class
+
 ## Credits
-CHOAuthViewController uses projects by Jon Crosby [(OAuthConsumer)](https://github.com/colinhumber/oauthconsumer) (modified to use ARC) and Luke Redpath [(LROAuth2Client)](https://github.com/drekka/LROAuth2Client) for handling the internals of authenticating against OAuth services. 
+
+CHOAuthViewController uses projects by Jon Crosby [(OAuthConsumer)](https://github.com/colinhumber/oauthconsumer) (modified to use ARC) and Luke Redpath [(LROAuth2Client)](https://github.com/drekka/LROAuth2Client) (modified to allow for custom OAuth 2 token responses) for handling the internals of authenticating against OAuth services. 
 
 ## License
+
 CHOAuthViewController is available under the MIT license. See the LICENSE file for more info.
