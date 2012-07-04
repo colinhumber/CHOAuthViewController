@@ -77,7 +77,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 		else {
 			self.client = [[LROAuth2Client alloc] initWithClientID:[_serviceDefinition clientID] 
 															secret:[_serviceDefinition clientSecret]
-													   redirectURL:requestURL];
+													   redirectURL:redirectURL];
 			_client.delegate = self;
 			_client.userURL = authorizeURL;
 			_client.tokenURL = tokenURL;
