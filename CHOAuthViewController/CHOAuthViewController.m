@@ -44,7 +44,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 
 
 - (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition {
-	self = [super init];
+	self = [super initWithNibName:@"CHOAuthViewController" bundle:nil];
 	
 	if (self) {
 		NSAssert(serviceDefinition != nil, @"Cannot provide a nil service definition");
@@ -93,35 +93,13 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 	return self;
 }
 
-- (void)loadView {
-	if (_webView) {
-		self.view = _webView;
-	}
-	else {
-		CGRect applicationBounds = CGRectOffset([UIScreen mainScreen].applicationFrame, 0, -20);
-		self.view = [[UIView alloc] initWithFrame:applicationBounds];
-
-		self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-
-		_navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, applicationBounds.size.width, 44)];
-		_navigationBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-		
-		UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:[NSString stringWithFormat:@"Connect to %@", [self.serviceDefinition serviceName]]];
-		navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
-		navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinner];
-		[_navigationBar pushNavigationItem:navigationItem animated:NO];
-		[self.view addSubview:_navigationBar];
-		
-		self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 44, applicationBounds.size.width, applicationBounds.size.height - 44)];
-		_webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | 
-									UIViewAutoresizingFlexibleHeight;
-		
-		[self.view addSubview:_webView];
-	}
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+
+	self.navigationBar.topItem.title = [NSString stringWithFormat:@"Connect to %@", [self.serviceDefinition serviceName]];
+	self.navigationBar.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinner];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
