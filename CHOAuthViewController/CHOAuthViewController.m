@@ -110,7 +110,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 	}
 
 	if (self.useLegacyOAuth) {
-		[self.legacyClient authorizeUsingWebView:self.webView additionalParameters:[self.serviceDefinition additionalParameters]];
+		[self.legacyClient authorizeUsingWebView:self.webView additionalParameters:additionalParameters];
 	}
 	else {
 		[self.client authorizeUsingWebView:self.webView additionalParameters:additionalParameters];		
@@ -119,6 +119,10 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
+}
+
+- (void)dealloc {
+	self.webView.delegate = nil;
 }
 
 #pragma mark - Actions
