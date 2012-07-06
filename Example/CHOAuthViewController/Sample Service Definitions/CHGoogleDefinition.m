@@ -18,11 +18,11 @@
 }
 
 - (NSString *)clientID {
-	return @"807033624458.apps.googleusercontent.com";
+	return @"";
 }
 
 - (NSString *)clientSecret {
-	return @"o_BG5A-krWXae_mki9OXGROd";
+	return @"";
 }
 
 - (NSString *)requestURLPath {

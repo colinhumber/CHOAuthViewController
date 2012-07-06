@@ -21,6 +21,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 
 @interface CHOAuthViewController () <LROAuth2ClientDelegate, CHOAuthClientDelegate>
 @property (nonatomic, strong) UIActivityIndicatorView *spinner;
+@property (nonatomic, readonly) IBOutlet UIWebView *webView;
 
 @property (nonatomic, strong) id<CHOAuthServiceDefinition> serviceDefinition;
 @property (nonatomic, strong) LROAuth2Client *client;

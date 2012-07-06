@@ -18,13 +18,7 @@ extern NSString *const CHOAuthDidRefreshAccessTokenNotification;
 
 @interface CHOAuthViewController : UIViewController
 
-// if a custom UIWebView is not specified this refers to the internal navigation bar created for the internal UIWebView. If a custom UIWebView has been specified
-// this is nil.
-@property (nonatomic, readonly) UINavigationBar *navigationBar;
-
-// if a webView already exists that should be used to load the login screens it can be specified here. If nil, a UIWebView will be created alongside a UINavigationBar
-// and a Cancel button.
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, readonly) IBOutlet UINavigationBar *navigationBar;
 
 - (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition;
 
