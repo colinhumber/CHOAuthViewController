@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B01D3AD159935E500075572 /* CHYammerDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01D3AC159935E500075572 /* CHYammerDefinition.m */; };
-		0B64BF5C159D789D004E4840 /* libLROAuth2Client-Simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDA60FA159D750700CED455 /* libLROAuth2Client-Simulator.a */; };
+		0B77A5B415AA8D8B00299AEF /* libLROAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B77A5B115AA8CDA00299AEF /* libLROAuth2Client.a */; };
+		0B77A5B715AA920600299AEF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B77A5B615AA920600299AEF /* MainStoryboard.storyboard */; };
 		0BDA6126159D754300CED455 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA60FE159D754300CED455 /* NSMutableURLRequest+Parameters.m */; };
 		0BDA6127159D754300CED455 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6100159D754300CED455 /* NSString+URLEncoding.m */; };
 		0BDA6128159D754300CED455 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6102159D754300CED455 /* NSURL+Base.m */; };
@@ -41,20 +42,12 @@
 		9585F28615825F3100454EC8 /* CHOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F28015825F3100454EC8 /* CHOAuthClient.m */; };
 		9585F28715825F3100454EC8 /* CHOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F28415825F3100454EC8 /* CHOAuthViewController.m */; };
 		9585F28815825F3100454EC8 /* CHOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585F28515825F3100454EC8 /* CHOAuthViewController.xib */; };
-		9585F2B5158260AF00454EC8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9585F25A15825EA200454EC8 /* MainStoryboard.storyboard */; };
 		9585F2B6158260BA00454EC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9585F25815825EA200454EC8 /* InfoPlist.strings */; };
 		9585F2BA158260F800454EC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9585F2B8158260F800454EC8 /* InfoPlist.strings */; };
 		9585F2BD15829FBB00454EC8 /* CHGoogleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0B43480E15AA89A200514C5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A3289D4B122D705500D89A88;
-			remoteInfo = "LROAuth2Client-Device";
-		};
 		0B64BF5A159D7893004E4840 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
@@ -62,18 +55,19 @@
 			remoteGlobalIDString = A3289EB3122D758F00D89A88;
 			remoteInfo = LROAuth2Client;
 		};
-		0BDA60F9159D750700CED455 /* PBXContainerItemProxy */ = {
+		0B77A5B015AA8CDA00299AEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A3289EC3122D758F00D89A88;
-			remoteInfo = "LROAuth2Client-Simulator";
+			remoteInfo = LROAuth2Client;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B01D3AB159935E500075572 /* CHYammerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHYammerDefinition.h; sourceTree = "<group>"; };
 		0B01D3AC159935E500075572 /* CHYammerDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHYammerDefinition.m; sourceTree = "<group>"; };
+		0B77A5B615AA920600299AEF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LROAuth2Client.xcodeproj; path = Vendor/LROAuth2Client/LROAuth2Client.xcodeproj; sourceTree = "<group>"; };
 		0BDA60FD159D754300CED455 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		0BDA60FE159D754300CED455 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
@@ -87,7 +81,7 @@
 		0BDA6107159D754300CED455 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
 		0BDA6108159D754300CED455 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
 		0BDA6109159D754300CED455 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
-		0BDA610A159D754300CED455 /* OAAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAAttachment.h; path = ../../OAAttachment.h; sourceTree = "<group>"; };
+		0BDA610A159D754300CED455 /* OAAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAttachment.h; sourceTree = "<group>"; };
 		0BDA610B159D754300CED455 /* OAAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAttachment.m; sourceTree = "<group>"; };
 		0BDA610C159D754300CED455 /* OACall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACall.h; sourceTree = "<group>"; };
 		0BDA610D159D754300CED455 /* OACall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACall.m; sourceTree = "<group>"; };
@@ -121,11 +115,8 @@
 		953E585D157EADDD00DB9CBD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9585F24815825EA200454EC8 /* CHAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
 		9585F24915825EA200454EC8 /* CHAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
-		9585F24A15825EA200454EC8 /* CHConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHConfiguration.h; sourceTree = "<group>"; };
-		9585F24B15825EA200454EC8 /* CHConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHConfiguration.m; sourceTree = "<group>"; };
 		9585F25615825EA200454EC8 /* CHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
 		9585F25715825EA200454EC8 /* CHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
-		9585F25B15825EA200454EC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9585F25E15825EA200454EC8 /* CHFacebookDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHFacebookDefinition.h; sourceTree = "<group>"; };
 		9585F25F15825EA200454EC8 /* CHFacebookDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHFacebookDefinition.m; sourceTree = "<group>"; };
 		9585F26015825EA200454EC8 /* CHInstagramDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHInstagramDefinition.h; sourceTree = "<group>"; };
@@ -138,7 +129,7 @@
 		9585F27F15825F3100454EC8 /* CHOAuthClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthClient.h; sourceTree = "<group>"; };
 		9585F28015825F3100454EC8 /* CHOAuthClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthClient.m; sourceTree = "<group>"; };
 		9585F28115825F3100454EC8 /* CHOAuthClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthClientDelegate.h; sourceTree = "<group>"; };
-		9585F28215825F3100454EC8 /* CHOAuthServiceDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthServiceDefinition.h; sourceTree = "<group>"; };
+		9585F28215825F3100454EC8 /* CHOAuthServiceDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHOAuthServiceDefinition.h; path = ../CHOAuthViewController/CHOAuthServiceDefinition.h; sourceTree = "<group>"; };
 		9585F28315825F3100454EC8 /* CHOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthViewController.h; sourceTree = "<group>"; };
 		9585F28415825F3100454EC8 /* CHOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthViewController.m; sourceTree = "<group>"; };
 		9585F28515825F3100454EC8 /* CHOAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHOAuthViewController.xib; sourceTree = "<group>"; };
@@ -152,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B64BF5C159D789D004E4840 /* libLROAuth2Client-Simulator.a in Frameworks */,
+				0B77A5B415AA8D8B00299AEF /* libLROAuth2Client.a in Frameworks */,
 				953E585A157EADDD00DB9CBD /* UIKit.framework in Frameworks */,
 				953E585C157EADDD00DB9CBD /* Foundation.framework in Frameworks */,
 				953E585E157EADDD00DB9CBD /* CoreGraphics.framework in Frameworks */,
@@ -162,11 +153,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B77A5B515AA8DE200299AEF /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				0B77A5B615AA920600299AEF /* MainStoryboard.storyboard */,
+				9585F24815825EA200454EC8 /* CHAppDelegate.h */,
+				9585F24915825EA200454EC8 /* CHAppDelegate.m */,
+				9585F25615825EA200454EC8 /* CHViewController.h */,
+				9585F25715825EA200454EC8 /* CHViewController.m */,
+			);
+			name = Examples;
+			path = examples;
+			sourceTree = "<group>";
+		};
 		0BDA60F0159D750600CED455 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B43480F15AA89A200514C5C /* libLROAuth2Client-Device.a */,
-				0BDA60FA159D750700CED455 /* libLROAuth2Client-Simulator.a */,
+				0B77A5B115AA8CDA00299AEF /* libLROAuth2Client.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,8 +241,9 @@
 		953E584A157EADDD00DB9CBD = {
 			isa = PBXGroup;
 			children = (
+				0B77A5B515AA8DE200299AEF /* Examples */,
 				0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */,
-				9585F24715825EA200454EC8 /* OAuth Demo */,
+				9585F24715825EA200454EC8 /* Classes */,
 				953E5858157EADDD00DB9CBD /* Frameworks */,
 				953E5856157EADDD00DB9CBD /* Products */,
 			);
@@ -276,27 +280,21 @@
 			path = ../CHOAuth2WebViewController;
 			sourceTree = "<group>";
 		};
-		9585F24715825EA200454EC8 /* OAuth Demo */ = {
+		9585F24715825EA200454EC8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9585F27E15825F3100454EC8 /* CHOAuthViewController */,
-				9585F24815825EA200454EC8 /* CHAppDelegate.h */,
-				9585F24915825EA200454EC8 /* CHAppDelegate.m */,
-				9585F24A15825EA200454EC8 /* CHConfiguration.h */,
-				9585F24B15825EA200454EC8 /* CHConfiguration.m */,
-				9585F25615825EA200454EC8 /* CHViewController.h */,
-				9585F25715825EA200454EC8 /* CHViewController.m */,
-				9585F25A15825EA200454EC8 /* MainStoryboard.storyboard */,
-				9585F25D15825EA200454EC8 /* Sample Service Definitions */,
+				9585F27E15825F3100454EC8 /* OAuth */,
+				9585F25D15825EA200454EC8 /* Service Definitions */,
 				953E5860157EADDD00DB9CBD /* Supporting Files */,
 			);
-			name = "OAuth Demo";
+			name = Classes;
 			path = CHOAuthViewController;
 			sourceTree = SOURCE_ROOT;
 		};
-		9585F25D15825EA200454EC8 /* Sample Service Definitions */ = {
+		9585F25D15825EA200454EC8 /* Service Definitions */ = {
 			isa = PBXGroup;
 			children = (
+				9585F28215825F3100454EC8 /* CHOAuthServiceDefinition.h */,
 				9585F25E15825EA200454EC8 /* CHFacebookDefinition.h */,
 				9585F25F15825EA200454EC8 /* CHFacebookDefinition.m */,
 				9585F26015825EA200454EC8 /* CHInstagramDefinition.h */,
@@ -308,20 +306,21 @@
 				0B01D3AB159935E500075572 /* CHYammerDefinition.h */,
 				0B01D3AC159935E500075572 /* CHYammerDefinition.m */,
 			);
+			name = "Service Definitions";
 			path = "Sample Service Definitions";
 			sourceTree = "<group>";
 		};
-		9585F27E15825F3100454EC8 /* CHOAuthViewController */ = {
+		9585F27E15825F3100454EC8 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
 				9585F27F15825F3100454EC8 /* CHOAuthClient.h */,
 				9585F28015825F3100454EC8 /* CHOAuthClient.m */,
 				9585F28115825F3100454EC8 /* CHOAuthClientDelegate.h */,
-				9585F28215825F3100454EC8 /* CHOAuthServiceDefinition.h */,
 				9585F28315825F3100454EC8 /* CHOAuthViewController.h */,
 				9585F28415825F3100454EC8 /* CHOAuthViewController.m */,
 				9585F28515825F3100454EC8 /* CHOAuthViewController.xib */,
 			);
+			name = OAuth;
 			path = CHOAuthViewController;
 			sourceTree = "<group>";
 		};
@@ -379,18 +378,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0B43480F15AA89A200514C5C /* libLROAuth2Client-Device.a */ = {
+		0B77A5B115AA8CDA00299AEF /* libLROAuth2Client.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libLROAuth2Client-Device.a";
-			remoteRef = 0B43480E15AA89A200514C5C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0BDA60FA159D750700CED455 /* libLROAuth2Client-Simulator.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libLROAuth2Client-Simulator.a";
-			remoteRef = 0BDA60F9159D750700CED455 /* PBXContainerItemProxy */;
+			path = libLROAuth2Client.a;
+			remoteRef = 0B77A5B015AA8CDA00299AEF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -401,11 +393,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9585F2B6158260BA00454EC8 /* InfoPlist.strings in Resources */,
-				9585F2B5158260AF00454EC8 /* MainStoryboard.storyboard in Resources */,
 				9585F28815825F3100454EC8 /* CHOAuthViewController.xib in Resources */,
 				9585F2BA158260F800454EC8 /* InfoPlist.strings in Resources */,
 				0BDA6136159D754300CED455 /* OATestServer.rb in Resources */,
 				0BDA6139159D754300CED455 /* README in Resources */,
+				0B77A5B715AA920600299AEF /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,14 +457,6 @@
 			name = InfoPlist.strings;
 			path = /Users/colinhumber/Sandbox/CHOAuthViewController/CHOAuthViewController;
 			sourceTree = "<absolute>";
-		};
-		9585F25A15825EA200454EC8 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9585F25B15825EA200454EC8 /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
 		};
 		9585F2B8158260F800454EC8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
