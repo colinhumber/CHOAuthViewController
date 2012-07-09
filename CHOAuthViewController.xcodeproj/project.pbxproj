@@ -48,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0B43480E15AA89A200514C5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3289D4B122D705500D89A88;
+			remoteInfo = "LROAuth2Client-Device";
+		};
 		0B64BF5A159D7893004E4840 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
@@ -158,6 +165,7 @@
 		0BDA60F0159D750600CED455 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				0B43480F15AA89A200514C5C /* libLROAuth2Client-Device.a */,
 				0BDA60FA159D750700CED455 /* libLROAuth2Client-Simulator.a */,
 			);
 			name = Products;
@@ -371,6 +379,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0B43480F15AA89A200514C5C /* libLROAuth2Client-Device.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libLROAuth2Client-Device.a";
+			remoteRef = 0B43480E15AA89A200514C5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		0BDA60FA159D750700CED455 /* libLROAuth2Client-Simulator.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
