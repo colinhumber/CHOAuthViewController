@@ -346,7 +346,7 @@
 			children = (
 				0B77A5B515AA8DE200299AEF /* Examples */,
 				0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */,
-				9585F24715825EA200454EC8 /* Classes */,
+				9585F24715825EA200454EC8 /* CHOAuthClient */,
 				0B77A5CE15AA951700299AEF /* CHOAuthClient */,
 				953E5858157EADDD00DB9CBD /* Frameworks */,
 				953E5856157EADDD00DB9CBD /* Products */,
@@ -381,15 +381,14 @@
 			path = ../CHOAuth2WebViewController;
 			sourceTree = "<group>";
 		};
-		9585F24715825EA200454EC8 /* Classes */ = {
+		9585F24715825EA200454EC8 /* CHOAuthClient */ = {
 			isa = PBXGroup;
 			children = (
-				9585F27E15825F3100454EC8 /* CHOAuthClient */,
+				9585F27E15825F3100454EC8 /* classes */,
 				9585F25D15825EA200454EC8 /* Service Definitions */,
 				953E5860157EADDD00DB9CBD /* Supporting Files */,
 			);
-			name = Classes;
-			path = CHOAuthViewController;
+			path = CHOAuthClient;
 			sourceTree = SOURCE_ROOT;
 		};
 		9585F25D15825EA200454EC8 /* Service Definitions */ = {
@@ -407,11 +406,10 @@
 				0B01D3AB159935E500075572 /* CHYammerDefinition.h */,
 				0B01D3AC159935E500075572 /* CHYammerDefinition.m */,
 			);
-			name = "Service Definitions";
-			path = "CHOAuthClient/Service Definitions";
+			path = "Service Definitions";
 			sourceTree = "<group>";
 		};
-		9585F27E15825F3100454EC8 /* CHOAuthClient */ = {
+		9585F27E15825F3100454EC8 /* classes */ = {
 			isa = PBXGroup;
 			children = (
 				9585F27F15825F3100454EC8 /* CHOAuthClient.h */,
@@ -421,8 +419,7 @@
 				9585F28415825F3100454EC8 /* CHOAuthViewController.m */,
 				9585F28515825F3100454EC8 /* CHOAuthViewController.xib */,
 			);
-			name = CHOAuthClient;
-			path = CHOAuthClient/classes;
+			path = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
