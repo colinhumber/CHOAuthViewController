@@ -20,7 +20,6 @@
 		0B77A5CD15AA951700299AEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585B157EADDD00DB9CBD /* Foundation.framework */; };
 		0B77A5DC15AA95BB00299AEF /* libCHOAuthClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B77A5CC15AA951700299AEF /* libCHOAuthClient.a */; };
 		0B77A5E415AA969A00299AEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E5859157EADDD00DB9CBD /* UIKit.framework */; };
-		0B77A5E615AA96BA00299AEF /* libLROAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B77A5B115AA8CDA00299AEF /* libLROAuth2Client.a */; };
 		0B77A5E715AA971800299AEF /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA60FE159D754300CED455 /* NSMutableURLRequest+Parameters.m */; };
 		0B77A5E815AA971800299AEF /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6100159D754300CED455 /* NSString+URLEncoding.m */; };
 		0B77A5E915AA971800299AEF /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6102159D754300CED455 /* NSURL+Base.m */; };
@@ -80,13 +79,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0B77A5B015AA8CDA00299AEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A3289EC3122D758F00D89A88;
-			remoteInfo = LROAuth2Client;
-		};
 		0B77A5D815AA957F00299AEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
@@ -186,7 +178,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B77A5E615AA96BA00299AEF /* libLROAuth2Client.a in Frameworks */,
 				0B77A5E415AA969A00299AEF /* UIKit.framework in Frameworks */,
 				0B77A5CD15AA951700299AEF /* Foundation.framework in Frameworks */,
 			);
@@ -234,7 +225,6 @@
 		0BDA60F0159D750600CED455 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B77A5B115AA8CDA00299AEF /* libLROAuth2Client.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -307,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				9585F24715825EA200454EC8 /* CHOAuthClient */,
+				953E5860157EADDD00DB9CBD /* Supporting Files */,
 				0B77A5B515AA8DE200299AEF /* Examples */,
 				953E5858157EADDD00DB9CBD /* Frameworks */,
 				0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */,
@@ -340,7 +331,7 @@
 				0BDA60FB159D754300CED455 /* OAuthConsumer */,
 			);
 			name = "Supporting Files";
-			path = ../CHOAuth2WebViewController;
+			path = CHOAuth2WebViewController;
 			sourceTree = "<group>";
 		};
 		9585F24715825EA200454EC8 /* CHOAuthClient */ = {
@@ -348,7 +339,6 @@
 			children = (
 				9585F27E15825F3100454EC8 /* classes */,
 				9585F25D15825EA200454EC8 /* Service Definitions */,
-				953E5860157EADDD00DB9CBD /* Supporting Files */,
 			);
 			path = CHOAuthClient;
 			sourceTree = SOURCE_ROOT;
@@ -356,14 +346,14 @@
 		9585F25D15825EA200454EC8 /* Service Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				0BA3214F15B531AD00CCC9CA /* CHOAuthAbstractService.h */,
-				0BA3215015B531AD00CCC9CA /* CHOAuthAbstractService.m */,
 				9585F25E15825EA200454EC8 /* CHFacebookDefinition.h */,
 				9585F25F15825EA200454EC8 /* CHFacebookDefinition.m */,
 				9585F2BB15829FBB00454EC8 /* CHGoogleDefinition.h */,
 				9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */,
 				9585F26015825EA200454EC8 /* CHInstagramDefinition.h */,
 				9585F26115825EA200454EC8 /* CHInstagramDefinition.m */,
+				0BA3214F15B531AD00CCC9CA /* CHOAuthAbstractService.h */,
+				0BA3215015B531AD00CCC9CA /* CHOAuthAbstractService.m */,
 				9585F28215825F3100454EC8 /* CHOAuthServiceDefinition.h */,
 				9585F26215825EA200454EC8 /* CHTwitterDefinition.h */,
 				9585F26315825EA200454EC8 /* CHTwitterDefinition.m */,
@@ -497,16 +487,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0B77A5B115AA8CDA00299AEF /* libLROAuth2Client.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libLROAuth2Client.a;
-			remoteRef = 0B77A5B015AA8CDA00299AEF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		953E5853157EADDD00DB9CBD /* Resources */ = {
