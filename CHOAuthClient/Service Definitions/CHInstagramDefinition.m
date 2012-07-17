@@ -26,10 +26,6 @@
 	return @"3849d8323799403580eb80beda7b152f";
 }
 
-- (NSString *)requestURLPath {
-	return nil;
-}
-
 - (NSString *)authorizeURLPath {
 	return @"https://api.instagram.com/oauth/authorize";
 }

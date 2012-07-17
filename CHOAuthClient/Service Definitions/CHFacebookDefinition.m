@@ -26,10 +26,6 @@
 	return @"bf72778ae068d0d71f9a01a93cdedb51";
 }
 
-- (NSString *)requestURLPath {
-	return nil;
-}
-
 - (NSString *)authorizeURLPath {
 	return @"https://graph.facebook.com/oauth/authorize";
 }

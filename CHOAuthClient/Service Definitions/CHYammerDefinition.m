@@ -25,10 +25,6 @@
 	return @"UaTdF5ww5GbQ2OxuakiMQwVDrH6ThVkl37Dokp38gY";
 }
 
-- (NSString *)requestURLPath {
-	return nil;
-}
-
 - (NSString *)authorizeURLPath {
 	return @"https://www.yammer.com/dialog/oauth";
 }

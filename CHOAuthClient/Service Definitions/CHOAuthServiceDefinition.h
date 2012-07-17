@@ -22,9 +22,6 @@
 // client secret for the application. Sometimes called consumer secret
 - (NSString *)clientSecret;
 
-// request URL defined for the service. Only used for oAuth 1.0 services
-- (NSString *)requestURLPath;
-
 // authorization URL defined for the service. Used in both oAuth 1.0 and 2.0
 - (NSString *)authorizeURLPath;
 
@@ -35,6 +32,10 @@
 - (NSString *)redirectURLPath;
 
 @optional
+
+// request URL defined for the service. Only used for oAuth 1.0 services
+- (NSString *)requestURLPath;
+
 // dictionary of parameters used during the authentication process. Generally used to define scope permissions, but may include any arbitrary
 // values as required by the service being defined
 - (NSDictionary *)additionalParameters;

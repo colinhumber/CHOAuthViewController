@@ -60,7 +60,8 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 		NSAssert([serviceDefinition tokenURLPath] != nil, @"A valid token URL path must be provided");
 		
 		if (self.useLegacyOAuth) {
-			NSAssert([serviceDefinition requestURLPath] != nil, @"A valid request URL path must be provided");
+			NSAssert([serviceDefinition respondsToSelector:@selector(requestURLPath)]
+						&& [serviceDefinition requestURLPath] != nil, @"A valid request URL path must be provided for OAuth1 services");
 		
 			self.legacyClient = [[CHOAuthClient alloc] initWithConsumerKey:[_serviceDefinition clientID] 
 															consumerSecret:[_serviceDefinition clientSecret] 

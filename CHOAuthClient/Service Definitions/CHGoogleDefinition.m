@@ -25,10 +25,6 @@
 	return @"o_BG5A-krWXae_mki9OXGROd";
 }
 
-- (NSString *)requestURLPath {
-	return nil;
-}
-
 - (NSString *)authorizeURLPath {
 	return @"https://accounts.google.com/o/oauth2/auth";
 }
