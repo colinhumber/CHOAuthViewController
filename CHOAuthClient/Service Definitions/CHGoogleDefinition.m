@@ -9,20 +9,9 @@
 #import "CHGoogleDefinition.h"
 
 @implementation CHGoogleDefinition
+
 - (NSString *)serviceName {
 	return @"Google";
-}
-
-- (CGFloat)oAuthVersion {
-	return 2.0;
-}
-
-- (NSString *)clientID {
-	return @"807033624458.apps.googleusercontent.com";
-}
-
-- (NSString *)clientSecret {
-	return @"o_BG5A-krWXae_mki9OXGROd";
 }
 
 - (NSString *)authorizeURLPath {

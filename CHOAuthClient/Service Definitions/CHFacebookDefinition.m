@@ -14,18 +14,6 @@
 	return @"Facebook";
 }
 
-- (CGFloat)oAuthVersion {
-	return 2.0;
-}
-
-- (NSString *)clientID {
-	return @"175666859124998";
-}
-
-- (NSString *)clientSecret {
-	return @"bf72778ae068d0d71f9a01a93cdedb51";
-}
-
 - (NSString *)authorizeURLPath {
 	return @"https://graph.facebook.com/oauth/authorize";
 }

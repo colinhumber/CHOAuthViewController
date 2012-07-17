@@ -15,15 +15,7 @@
 }
 
 - (CGFloat)oAuthVersion {
-	return 1.0;
-}
-
-- (NSString *)clientID {
-	return @"izjw1JYePlsOzgv2EhLOyg";
-}
-
-- (NSString *)clientSecret {
-	return @"7VYIAYTLCpLPmNpW2tXqfadBas01OAf6hLvQQvhbg";
+	return OUATH_V1;
 }
 
 - (NSString *)requestURLPath {

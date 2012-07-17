@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CHOAuthServiceDefinition.h"
+#import "CHFacebookDefinition.h"
 
-@interface MyCHFacebookDefinition : NSObject <CHOAuthServiceDefinition>
+@interface MyCHFacebookDefinition : CHFacebookDefinition
 
 @end

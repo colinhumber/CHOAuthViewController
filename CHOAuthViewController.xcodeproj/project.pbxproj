@@ -44,6 +44,8 @@
 		0B77A5F615AA971800299AEF /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA611D159D754300CED455 /* OAServiceTicket.m */; };
 		0B77A5F715AA971800299AEF /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6121159D754300CED455 /* OAToken.m */; };
 		0B77A5F815AA971800299AEF /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6123159D754300CED455 /* OATokenManager.m */; };
+		0BA3215115B531AD00CCC9CA /* CHAbstractService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA3214F15B531AD00CCC9CA /* CHAbstractService.h */; };
+		0BA3215215B531AD00CCC9CA /* CHAbstractService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3215015B531AD00CCC9CA /* CHAbstractService.m */; };
 		0BCC90B515AA9D90009FA107 /* CHOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F28015825F3100454EC8 /* CHOAuthClient.m */; };
 		0BCC90B615AAA38F009FA107 /* NSMutableURLRequest+Parameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDA60FD159D754300CED455 /* NSMutableURLRequest+Parameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BCC90B715AAA38F009FA107 /* NSString+URLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDA60FF159D754300CED455 /* NSString+URLEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -122,6 +124,8 @@
 		0B77A5C115AA93D100299AEF /* MyCHYammerDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCHYammerDefinition.m; sourceTree = "<group>"; };
 		0B77A5CC15AA951700299AEF /* libCHOAuthClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCHOAuthClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B77A5D015AA951700299AEF /* CHOAuthClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHOAuthClient-Prefix.pch"; sourceTree = "<group>"; };
+		0BA3214F15B531AD00CCC9CA /* CHAbstractService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAbstractService.h; sourceTree = "<group>"; };
+		0BA3215015B531AD00CCC9CA /* CHAbstractService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHAbstractService.m; sourceTree = "<group>"; };
 		0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LROAuth2Client.xcodeproj; path = Vendor/LROAuth2Client/LROAuth2Client.xcodeproj; sourceTree = "<group>"; };
 		0BDA60FD159D754300CED455 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		0BDA60FE159D754300CED455 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
@@ -396,6 +400,8 @@
 				9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */,
 				0B01D3AB159935E500075572 /* CHYammerDefinition.h */,
 				0B01D3AC159935E500075572 /* CHYammerDefinition.m */,
+				0BA3214F15B531AD00CCC9CA /* CHAbstractService.h */,
+				0BA3215015B531AD00CCC9CA /* CHAbstractService.m */,
 			);
 			path = "Service Definitions";
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 				0BCC90C715AAA38F009FA107 /* OAToken.h in Headers */,
 				0BCC90C815AAA38F009FA107 /* OATokenManager.h in Headers */,
 				0BCC90C915AAA38F009FA107 /* OAuthConsumer.h in Headers */,
+				0BA3215115B531AD00CCC9CA /* CHAbstractService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +586,7 @@
 				0BEDD35515AA9AD0009E99BA /* CHYammerDefinition.m in Sources */,
 				0BEDD35615AA9B63009E99BA /* CHOAuthViewController.m in Sources */,
 				0BCC90B515AA9D90009FA107 /* CHOAuthClient.m in Sources */,
+				0BA3215215B531AD00CCC9CA /* CHAbstractService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

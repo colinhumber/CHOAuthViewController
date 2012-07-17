@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CHOAuthServiceDefinition.h"
+#import "CHYammerDefinition.h"
 
-@interface MyCHYammerDefinition : NSObject <CHOAuthServiceDefinition>
+@interface MyCHYammerDefinition : CHYammerDefinition
 
 @end
 

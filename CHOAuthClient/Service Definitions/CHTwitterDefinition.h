@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CHOAuthServiceDefinition.h"
+#import "CHAbstractService.h"
 
-@interface CHTwitterDefinition : NSObject <CHOAuthServiceDefinition>
+@interface CHTwitterDefinition : CHAbstractService
 
 @end

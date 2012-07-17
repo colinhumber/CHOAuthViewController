@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#define OUATH_V1 1.0
+#define OUATH_V2 2.0
+
 @protocol CHOAuthServiceDefinition <NSObject>
+
+// Default initialiser that sets the client id and secret.
+-(id) initWithClientId:(NSString *) clientId secret:(NSString *) secret;
 
 // name of the service being defined. Used to generate the save path for the access token
 - (NSString *)serviceName;

@@ -9,20 +9,9 @@
 #import "CHYammerDefinition.h"
 
 @implementation CHYammerDefinition
+
 - (NSString *)serviceName {
 	return @"Yammer";
-}
-
-- (CGFloat)oAuthVersion {
-	return 2.0;
-}
-
-- (NSString *)clientID {
-	return @"hgcfOES0jojCR1rrYqdtQ";
-}
-
-- (NSString *)clientSecret {
-	return @"UaTdF5ww5GbQ2OxuakiMQwVDrH6ThVkl37Dokp38gY";
 }
 
 - (NSString *)authorizeURLPath {
