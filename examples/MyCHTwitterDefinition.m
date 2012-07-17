@@ -10,13 +10,6 @@
 
 @implementation MyCHTwitterDefinition
 
-- (NSString *)serviceName {
-	return @"Twitter";
-}
-
-- (CGFloat)oAuthVersion {
-	return 1.0;
-}
 
 - (NSString *)clientID {
 	return @"izjw1JYePlsOzgv2EhLOyg";
@@ -26,24 +19,5 @@
 	return @"7VYIAYTLCpLPmNpW2tXqfadBas01OAf6hLvQQvhbg";
 }
 
-- (NSString *)requestURLPath {
-	return @"https://api.twitter.com/oauth/request_token";
-}
-
-- (NSString *)authorizeURLPath {
-	return @"https://api.twitter.com/oauth/authorize";
-}
-
-- (NSString *)tokenURLPath {
-	return @"https://api.twitter.com/oauth/access_token";
-}
-
-- (NSString *)redirectURLPath {
-	return @"http://example.com";
-}
-
-- (NSDictionary *)additionalParameters {
-	return nil;
-}
 
 @end
