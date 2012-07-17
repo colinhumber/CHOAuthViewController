@@ -17,11 +17,6 @@
 		0B2EEDE315AA9C30004309EF /* CHGoogleDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 9585F2BB15829FBB00454EC8 /* CHGoogleDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B2EEDE415AA9C30004309EF /* CHYammerDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B01D3AB159935E500075572 /* CHYammerDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B77A5B715AA920600299AEF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B77A5B615AA920600299AEF /* MainStoryboard.storyboard */; };
-		0B77A5C215AA93D100299AEF /* MyCHFacebookDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B77A5B915AA93D100299AEF /* MyCHFacebookDefinition.m */; };
-		0B77A5C315AA93D100299AEF /* MyCHGoogleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B77A5BB15AA93D100299AEF /* MyCHGoogleDefinition.m */; };
-		0B77A5C415AA93D100299AEF /* MyCHInstagramDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B77A5BD15AA93D100299AEF /* MyCHInstagramDefinition.m */; };
-		0B77A5C515AA93D100299AEF /* MyCHTwitterDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B77A5BF15AA93D100299AEF /* MyCHTwitterDefinition.m */; };
-		0B77A5C615AA93D100299AEF /* MyCHYammerDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B77A5C115AA93D100299AEF /* MyCHYammerDefinition.m */; };
 		0B77A5CD15AA951700299AEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585B157EADDD00DB9CBD /* Foundation.framework */; };
 		0B77A5DC15AA95BB00299AEF /* libCHOAuthClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B77A5CC15AA951700299AEF /* libCHOAuthClient.a */; };
 		0B77A5E415AA969A00299AEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E5859157EADDD00DB9CBD /* UIKit.framework */; };
@@ -112,16 +107,6 @@
 		0B01D3AB159935E500075572 /* CHYammerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHYammerDefinition.h; sourceTree = "<group>"; };
 		0B01D3AC159935E500075572 /* CHYammerDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHYammerDefinition.m; sourceTree = "<group>"; };
 		0B77A5B615AA920600299AEF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0B77A5B815AA93D100299AEF /* MyCHFacebookDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCHFacebookDefinition.h; sourceTree = "<group>"; };
-		0B77A5B915AA93D100299AEF /* MyCHFacebookDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCHFacebookDefinition.m; sourceTree = "<group>"; };
-		0B77A5BA15AA93D100299AEF /* MyCHGoogleDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCHGoogleDefinition.h; sourceTree = "<group>"; };
-		0B77A5BB15AA93D100299AEF /* MyCHGoogleDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCHGoogleDefinition.m; sourceTree = "<group>"; };
-		0B77A5BC15AA93D100299AEF /* MyCHInstagramDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCHInstagramDefinition.h; sourceTree = "<group>"; };
-		0B77A5BD15AA93D100299AEF /* MyCHInstagramDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCHInstagramDefinition.m; sourceTree = "<group>"; };
-		0B77A5BE15AA93D100299AEF /* MyCHTwitterDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCHTwitterDefinition.h; sourceTree = "<group>"; };
-		0B77A5BF15AA93D100299AEF /* MyCHTwitterDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCHTwitterDefinition.m; sourceTree = "<group>"; };
-		0B77A5C015AA93D100299AEF /* MyCHYammerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCHYammerDefinition.h; sourceTree = "<group>"; };
-		0B77A5C115AA93D100299AEF /* MyCHYammerDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCHYammerDefinition.m; sourceTree = "<group>"; };
 		0B77A5CC15AA951700299AEF /* libCHOAuthClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCHOAuthClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B77A5D015AA951700299AEF /* CHOAuthClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHOAuthClient-Prefix.pch"; sourceTree = "<group>"; };
 		0BA3214F15B531AD00CCC9CA /* CHAbstractService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHAbstractService.h; sourceTree = "<group>"; };
@@ -227,7 +212,6 @@
 				9585F27215825EBE00454EC8 /* CHOAuthViewController-Info.plist */,
 				9585F27915825EBE00454EC8 /* main.m */,
 				9585F27315825EBE00454EC8 /* CHOAuthViewController-Prefix.pch */,
-				0B77A5C715AA93D500299AEF /* Service Definitions */,
 				0B77A5B615AA920600299AEF /* MainStoryboard.storyboard */,
 				9585F24815825EA200454EC8 /* CHAppDelegate.h */,
 				9585F24915825EA200454EC8 /* CHAppDelegate.m */,
@@ -236,23 +220,6 @@
 			);
 			name = Examples;
 			path = examples;
-			sourceTree = "<group>";
-		};
-		0B77A5C715AA93D500299AEF /* Service Definitions */ = {
-			isa = PBXGroup;
-			children = (
-				0B77A5B815AA93D100299AEF /* MyCHFacebookDefinition.h */,
-				0B77A5B915AA93D100299AEF /* MyCHFacebookDefinition.m */,
-				0B77A5BA15AA93D100299AEF /* MyCHGoogleDefinition.h */,
-				0B77A5BB15AA93D100299AEF /* MyCHGoogleDefinition.m */,
-				0B77A5BC15AA93D100299AEF /* MyCHInstagramDefinition.h */,
-				0B77A5BD15AA93D100299AEF /* MyCHInstagramDefinition.m */,
-				0B77A5BE15AA93D100299AEF /* MyCHTwitterDefinition.h */,
-				0B77A5BF15AA93D100299AEF /* MyCHTwitterDefinition.m */,
-				0B77A5C015AA93D100299AEF /* MyCHYammerDefinition.h */,
-				0B77A5C115AA93D100299AEF /* MyCHYammerDefinition.m */,
-			);
-			name = "Service Definitions";
 			sourceTree = "<group>";
 		};
 		0B77A5CF15AA951700299AEF /* Supporting Files */ = {
@@ -597,11 +564,6 @@
 				9585F26415825EA200454EC8 /* CHAppDelegate.m in Sources */,
 				9585F26A15825EA200454EC8 /* CHViewController.m in Sources */,
 				9585F27D15825EBE00454EC8 /* main.m in Sources */,
-				0B77A5C215AA93D100299AEF /* MyCHFacebookDefinition.m in Sources */,
-				0B77A5C315AA93D100299AEF /* MyCHGoogleDefinition.m in Sources */,
-				0B77A5C415AA93D100299AEF /* MyCHInstagramDefinition.m in Sources */,
-				0B77A5C515AA93D100299AEF /* MyCHTwitterDefinition.m in Sources */,
-				0B77A5C615AA93D100299AEF /* MyCHYammerDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

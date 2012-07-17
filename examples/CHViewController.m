@@ -56,27 +56,27 @@ NSString* AccessTokenSavePath(NSString *serviceName) {
 
 - (IBAction)loginToInstagram {
 	self.accessToken = nil;
-	[self loginToService:[[CHInstagramDefinition alloc] init]];
+	[self loginToService:[[ CHInstagramDefinition alloc] initWithClientId:@"d2eb5be8b572404383d6a3ac94f654c4" secret:@"3849d8323799403580eb80beda7b152f"]];
 }
 
 - (IBAction)loginToFacebook {
 	self.accessToken = nil;
-	[self loginToService:[[CHFacebookDefinition alloc] init]];
+	[self loginToService:[[CHFacebookDefinition alloc] initWithClientId:@"175666859124998" secret:@"bf72778ae068d0d71f9a01a93cdedb51"]];
 }
 
 - (IBAction)loginToTwitter {
 	self.accessToken = nil;
-	[self loginToService:[[CHTwitterDefinition alloc] init]];
+	[self loginToService:[[CHTwitterDefinition alloc] initWithClientId:@"izjw1JYePlsOzgv2EhLOyg" secret:@"7VYIAYTLCpLPmNpW2tXqfadBas01OAf6hLvQQvhbg"]];
 }
 
 - (IBAction)loginToGoogle {
 	self.accessToken = nil;
-	[self loginToService:[[CHGoogleDefinition alloc] init]];
+	[self loginToService:[[CHGoogleDefinition alloc] initWithClientId:@"807033624458.apps.googleusercontent.com" secret:@"o_BG5A-krWXae_mki9OXGROd"]];
 }
 
 - (IBAction)loginToYammer {
     self.accessToken = nil;
-    [self loginToService:[[CHYammerDefinition alloc] init]];
+    [self loginToService:[[CHYammerDefinition alloc] initWithClientId:@"hgcfOES0jojCR1rrYqdtQ" secret:@"UaTdF5ww5GbQ2OxuakiMQwVDrH6ThVkl37Dokp38gY"]];
 }
 
 - (IBAction)refreshCurrentToken {
