@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CHOAuthServiceDefinition.h"
 
-@interface CHAbstractService : NSObject<CHOAuthServiceDefinition> {
+@interface CHOAuthAbstractService : NSObject<CHOAuthServiceDefinition> {
 	@private
 	NSString *_clientId;
 	NSString *_secret;

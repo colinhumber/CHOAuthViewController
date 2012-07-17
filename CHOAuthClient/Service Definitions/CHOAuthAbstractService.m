@@ -6,9 +6,9 @@
 //
 //
 
-#import "CHAbstractService.h"
+#import "CHOAuthAbstractService.h"
 
-@implementation CHAbstractService
+@implementation CHOAuthAbstractService
 
 -(id) initWithClientId:(NSString *)clientId secret:(NSString *)secret {
 	self = [super init];

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CHAbstractService.h"
+#import "CHOAuthAbstractService.h"
 
-@interface CHFacebookDefinition : CHAbstractService
+@interface CHFacebookDefinition : CHOAuthAbstractService
 
 @end
