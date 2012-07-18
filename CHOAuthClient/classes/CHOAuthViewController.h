@@ -16,9 +16,9 @@
 extern NSString *const CHOAuthDidReceiveAccessTokenNotification;
 extern NSString *const CHOAuthDidRefreshAccessTokenNotification;
 
-@interface CHOAuthViewController : UIViewController
+@interface CHOAuthViewController : UIViewController<UIWebViewDelegate>
 
-@property (nonatomic, weak) IBOutlet UINavigationBar *navigationBar;
+@property (nonatomic, strong) UINavigationBar *navigationBar;
 
 - (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition;
 

@@ -183,4 +183,8 @@
 	return YES;
 }
 
+-(void) webViewDidFinishLoad:(UIWebView *)webView {
+	webView.hidden = NO;
+}
+
 @end
