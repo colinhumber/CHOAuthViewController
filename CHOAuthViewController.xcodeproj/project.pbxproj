@@ -38,7 +38,7 @@
 		0B77A5F615AA971800299AEF /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA611D159D754300CED455 /* OAServiceTicket.m */; };
 		0B77A5F715AA971800299AEF /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6121159D754300CED455 /* OAToken.m */; };
 		0B77A5F815AA971800299AEF /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA6123159D754300CED455 /* OATokenManager.m */; };
-		0BA3215115B531AD00CCC9CA /* CHOAuthAbstractService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA3214F15B531AD00CCC9CA /* CHOAuthAbstractService.h */; };
+		0BA3215115B531AD00CCC9CA /* CHOAuthAbstractService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA3214F15B531AD00CCC9CA /* CHOAuthAbstractService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BA3215215B531AD00CCC9CA /* CHOAuthAbstractService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA3215015B531AD00CCC9CA /* CHOAuthAbstractService.m */; };
 		0BCC90B515AA9D90009FA107 /* CHOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F28015825F3100454EC8 /* CHOAuthClient.m */; };
 		0BCC90B615AAA38F009FA107 /* NSMutableURLRequest+Parameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDA60FD159D754300CED455 /* NSMutableURLRequest+Parameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +70,7 @@
 		0BEDD35415AA9AD0009E99BA /* CHGoogleDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */; };
 		0BEDD35515AA9AD0009E99BA /* CHYammerDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01D3AC159935E500075572 /* CHYammerDefinition.m */; };
 		0BEDD35615AA9B63009E99BA /* CHOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F28415825F3100454EC8 /* CHOAuthViewController.m */; };
+		0BF6009B15B6328700068590 /* libLROAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6FF91215B54E960030220B /* libLROAuth2Client.a */; };
 		953E585A157EADDD00DB9CBD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E5859157EADDD00DB9CBD /* UIKit.framework */; };
 		953E585C157EADDD00DB9CBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953E585B157EADDD00DB9CBD /* Foundation.framework */; };
 		9585F26415825EA200454EC8 /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F24915825EA200454EC8 /* CHAppDelegate.m */; };
@@ -79,12 +80,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0B77A5D815AA957F00299AEF /* PBXContainerItemProxy */ = {
+		0B6FF91115B54E960030220B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A3289EB3122D758F00D89A88;
-			remoteInfo = LROAuth2Client;
+			containerPortal = 0B6FF90715B54E950030220B /* LROAuth2Client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3289EC3122D758F00D89A88;
+			remoteInfo = "LROAuth2Client-Simulator";
 		};
 		0B77A5DA15AA95B000299AEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -93,17 +94,24 @@
 			remoteGlobalIDString = 0B77A5CB15AA951700299AEF;
 			remoteInfo = CHOAuthClient;
 		};
+		0BF6009915B6328000068590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B6FF90715B54E950030220B /* LROAuth2Client.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A3289EB3122D758F00D89A88;
+			remoteInfo = LROAuth2Client;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B01D3AB159935E500075572 /* CHYammerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHYammerDefinition.h; sourceTree = "<group>"; };
 		0B01D3AC159935E500075572 /* CHYammerDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHYammerDefinition.m; sourceTree = "<group>"; };
+		0B6FF90715B54E950030220B /* LROAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LROAuth2Client.xcodeproj; path = Vendor/LROAuth2Client/LROAuth2Client.xcodeproj; sourceTree = "<group>"; };
 		0B77A5B615AA920600299AEF /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0B77A5CC15AA951700299AEF /* libCHOAuthClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCHOAuthClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B77A5D015AA951700299AEF /* CHOAuthClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHOAuthClient-Prefix.pch"; sourceTree = "<group>"; };
 		0BA3214F15B531AD00CCC9CA /* CHOAuthAbstractService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthAbstractService.h; sourceTree = "<group>"; };
 		0BA3215015B531AD00CCC9CA /* CHOAuthAbstractService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthAbstractService.m; sourceTree = "<group>"; };
-		0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LROAuth2Client.xcodeproj; path = Vendor/LROAuth2Client/LROAuth2Client.xcodeproj; sourceTree = "<group>"; };
 		0BDA60FD159D754300CED455 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		0BDA60FE159D754300CED455 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
 		0BDA60FF159D754300CED455 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF6009B15B6328700068590 /* libLROAuth2Client.a in Frameworks */,
 				0B77A5E415AA969A00299AEF /* UIKit.framework in Frameworks */,
 				0B77A5CD15AA951700299AEF /* Foundation.framework in Frameworks */,
 			);
@@ -196,6 +205,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B6FF90815B54E950030220B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B6FF91215B54E960030220B /* libLROAuth2Client.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0B77A5B515AA8DE200299AEF /* Examples */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,13 +237,6 @@
 			);
 			name = "Supporting Files";
 			path = CHOAuthClient;
-			sourceTree = "<group>";
-		};
-		0BDA60F0159D750600CED455 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0BDA60FB159D754300CED455 /* OAuthConsumer */ = {
@@ -296,11 +306,11 @@
 		953E584A157EADDD00DB9CBD = {
 			isa = PBXGroup;
 			children = (
+				0B6FF90715B54E950030220B /* LROAuth2Client.xcodeproj */,
 				9585F24715825EA200454EC8 /* CHOAuthClient */,
 				953E5860157EADDD00DB9CBD /* Supporting Files */,
 				0B77A5B515AA8DE200299AEF /* Examples */,
 				953E5858157EADDD00DB9CBD /* Frameworks */,
-				0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */,
 				953E5856157EADDD00DB9CBD /* Products */,
 				0B77A5CF15AA951700299AEF /* Supporting Files */,
 			);
@@ -430,7 +440,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				0B77A5D915AA957F00299AEF /* PBXTargetDependency */,
+				0BF6009A15B6328000068590 /* PBXTargetDependency */,
 			);
 			name = CHOAuthClient;
 			productName = CHOAuthClient;
@@ -476,8 +486,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0BDA60F0159D750600CED455 /* Products */;
-					ProjectRef = 0BDA60EF159D750600CED455 /* LROAuth2Client.xcodeproj */;
+					ProductGroup = 0B6FF90815B54E950030220B /* Products */;
+					ProjectRef = 0B6FF90715B54E950030220B /* LROAuth2Client.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -487,6 +497,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0B6FF91215B54E960030220B /* libLROAuth2Client.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLROAuth2Client.a;
+			remoteRef = 0B6FF91115B54E960030220B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		953E5853157EADDD00DB9CBD /* Resources */ = {
@@ -550,15 +570,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B77A5D915AA957F00299AEF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LROAuth2Client;
-			targetProxy = 0B77A5D815AA957F00299AEF /* PBXContainerItemProxy */;
-		};
 		0B77A5DB15AA95B000299AEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0B77A5CB15AA951700299AEF /* CHOAuthClient */;
 			targetProxy = 0B77A5DA15AA95B000299AEF /* PBXContainerItemProxy */;
+		};
+		0BF6009A15B6328000068590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LROAuth2Client;
+			targetProxy = 0BF6009915B6328000068590 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
