@@ -45,7 +45,8 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 }
 
 - (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition {
-	self = [super initWithNibName:@"CHOAuthViewController" bundle:nil];
+
+	self = [super init];
 	
 	if (self) {
 		NSAssert(serviceDefinition != nil, @"Cannot provide a nil service definition");
@@ -91,8 +92,37 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 	return self;
 }
 
+#pragma mark - View management
+
+-(void) loadView {
+	
+	UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+	view.backgroundColor = [UIColor yellowColor];
+	self.view = view;
+	
+	UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+	navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	[view addSubview:navBar];
+	
+	UINavigationItem *navItem = [[UINavigationItem alloc] init];
+	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
+	navItem.leftBarButtonItem = cancelButton;
+	
+	[navBar pushNavigationItem:navItem animated:NO];
+
+	UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 44, 100, 66)];
+	webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	[view addSubview:webView];
+	
+	[view setNeedsLayout];
+
+	self.webView = webView;
+	self.navigationBar = navBar;
+	
+}
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	self.navigationBar.topItem.title = [NSString stringWithFormat:@"Connect to %@", [self.serviceDefinition serviceName]];
 }
 
@@ -107,11 +137,6 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 		}
 		[self.client authorizeUsingWebView:self.webView additionalParameters:additionalParameters];		
 	}
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-	self.webView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

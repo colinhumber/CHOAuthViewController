@@ -76,7 +76,6 @@
 		9585F26415825EA200454EC8 /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F24915825EA200454EC8 /* CHAppDelegate.m */; };
 		9585F26A15825EA200454EC8 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F25715825EA200454EC8 /* CHViewController.m */; };
 		9585F27D15825EBE00454EC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585F27915825EBE00454EC8 /* main.m */; };
-		9585F28815825F3100454EC8 /* CHOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585F28515825F3100454EC8 /* CHOAuthViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,7 +175,6 @@
 		9585F28215825F3100454EC8 /* CHOAuthServiceDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthServiceDefinition.h; sourceTree = "<group>"; };
 		9585F28315825F3100454EC8 /* CHOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOAuthViewController.h; sourceTree = "<group>"; };
 		9585F28415825F3100454EC8 /* CHOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOAuthViewController.m; sourceTree = "<group>"; };
-		9585F28515825F3100454EC8 /* CHOAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHOAuthViewController.xib; sourceTree = "<group>"; };
 		9585F2BB15829FBB00454EC8 /* CHGoogleDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGoogleDefinition.h; sourceTree = "<group>"; };
 		9585F2BC15829FBB00454EC8 /* CHGoogleDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGoogleDefinition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -381,7 +379,6 @@
 				9585F28115825F3100454EC8 /* CHOAuthClientDelegate.h */,
 				9585F28315825F3100454EC8 /* CHOAuthViewController.h */,
 				9585F28415825F3100454EC8 /* CHOAuthViewController.m */,
-				9585F28515825F3100454EC8 /* CHOAuthViewController.xib */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -513,7 +510,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9585F28815825F3100454EC8 /* CHOAuthViewController.xib in Resources */,
 				0BDA6136159D754300CED455 /* OATestServer.rb in Resources */,
 				0BDA6139159D754300CED455 /* README in Resources */,
 				0B77A5B715AA920600299AEF /* MainStoryboard.storyboard in Resources */,

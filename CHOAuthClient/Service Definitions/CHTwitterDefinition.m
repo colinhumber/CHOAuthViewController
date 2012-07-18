@@ -34,8 +34,4 @@
 	return @"http://example.com";
 }
 
-- (NSDictionary *)additionalParameters {
-	return nil;
-}
-
 @end

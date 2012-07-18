@@ -31,7 +31,7 @@
 	return OUATH_V2;
 }
 
-// Nil defaults here on.
+// Nil defaults.
 
 - (NSString *)serviceName {
 	return nil;
