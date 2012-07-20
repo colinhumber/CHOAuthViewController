@@ -10,7 +10,7 @@
 
 #import "CHOAuthAbstractService.h"
 
-@interface CHYammerDefinition : CHOAuthAbstractService
+@interface CHYammerDefinition : CHOAuthService
 
 @end
 

@@ -1,9 +1,9 @@
 //
-//  CHOAuthServiceDefinition.h
+//  CHAbstractService.h
 //  CHOAuthViewController
 //
-//  Created by Colin Humber on 6/7/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Sensis on 17/07/12.
+//
 //
 
 #import <Foundation/Foundation.h>
@@ -11,7 +11,21 @@
 #define OUATH_V1 1.0
 #define OUATH_V2 2.0
 
-@protocol CHOAuthServiceDefinition <NSObject>
+// Service keys for some methods.
+typedef enum {
+	CHServiceProviderFacebook,
+	CHServiceProviderGoogle,
+	CHServiceProviderInstagram,
+	CHServiceProviderTwitter,
+	CHServiceProviderYammer
+} CHServiceProvider;
+
+@interface CHOAuthService : NSObject<CHOAuthServiceDefinition>
+
+// Service factory method.
++(CHOAuthService *) serviceForProvider:(CHServiceProvider) serviceProvider
+												  clientId:(NSString *) clientId
+													 secret:(NSString *) secret;
 
 // Default initialiser that sets the client id and secret.
 -(id) initWithClientId:(NSString *) clientId secret:(NSString *) secret;

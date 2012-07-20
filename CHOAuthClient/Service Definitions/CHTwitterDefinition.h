@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "CHOAuthAbstractService.h"
 
-@interface CHTwitterDefinition : CHOAuthAbstractService
+@interface CHTwitterDefinition : CHOAuthService
 
 @end

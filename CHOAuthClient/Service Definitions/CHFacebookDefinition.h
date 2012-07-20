@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "CHOAuthAbstractService.h"
 
-@interface CHFacebookDefinition : CHOAuthAbstractService
+@interface CHFacebookDefinition : CHOAuthService
 
 @end
