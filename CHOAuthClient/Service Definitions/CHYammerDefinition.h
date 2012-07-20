@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CHOAuthAbstractService.h"
+#import "CHOAuthServiceDefinition.h"
 
-@interface CHYammerDefinition : CHOAuthService
+@interface CHYammerDefinition : CHOAuthServiceDefinition
 
 @end
 

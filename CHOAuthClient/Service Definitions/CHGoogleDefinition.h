@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CHOAuthAbstractService.h"
+#import "CHOAuthServiceDefinition.h"
 
-@interface CHGoogleDefinition : CHOAuthService
+@interface CHGoogleDefinition : CHOAuthServiceDefinition
 
 @end

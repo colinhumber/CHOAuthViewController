@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CHOAuthServiceDefinition.h"
 
 @protocol CHOAuthServiceDefinition;
 
@@ -20,7 +21,7 @@ extern NSString *const CHOAuthDidRefreshAccessTokenNotification;
 
 @property (nonatomic, strong) UINavigationBar *navigationBar;
 
-- (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition;
+- (id)initWithServiceDefinition:(CHOAuthServiceDefinition *)serviceDefinition;
 
 // If the service has provided a refresh_token as part of the access token, this will request a new access token.
 // Only supported for OAuth 2.0 services. NOTE: not every service supports refresh_tokens. Please consult the service's documentation to confirm.

@@ -20,7 +20,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 @interface CHOAuthViewController () <LROAuth2ClientDelegate, CHOAuthClientDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
-@property (nonatomic, strong) id<CHOAuthServiceDefinition> serviceDefinition;
+@property (nonatomic, strong) CHOAuthServiceDefinition *serviceDefinition;
 @property (nonatomic, strong) LROAuth2Client *client;
 @property (nonatomic, strong) CHOAuthClient *legacyClient;
 
@@ -42,7 +42,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 	return [self.serviceDefinition oAuthVersion] == 1.0;
 }
 
-- (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition {
+- (id)initWithServiceDefinition:(CHOAuthServiceDefinition *)serviceDefinition {
 
 	self = [super init];
 	
@@ -77,11 +77,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 			_client.delegate = self;
 			_client.userURL = [NSURL URLWithString:[_serviceDefinition authorizeURLPath]];
 			_client.tokenURL = [NSURL URLWithString:[_serviceDefinition tokenURLPath]];
-			
-			// If defined, pass an overriding path to the access token.
-			if ([_serviceDefinition respondsToSelector:@selector(accessTokenKeyPath)]) {
-				_client.accessTokenKeyPath = _serviceDefinition.accessTokenKeyPath;
-			}
+			_client.accessTokenKeyPath = _serviceDefinition.accessTokenKeyPath;
 		}
 
 		self.modalPresentationStyle = UIModalPresentationFormSheet;

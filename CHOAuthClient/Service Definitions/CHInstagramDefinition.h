@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CHOAuthAbstractService.h"
+#import "CHOAuthServiceDefinition.h"
 
-@interface CHInstagramDefinition : CHOAuthService
+@interface CHInstagramDefinition : CHOAuthServiceDefinition
 
 @end

@@ -6,14 +6,14 @@
 //
 //
 
-#import "CHOAuthAbstractService.h"
+#import "CHOAuthServiceDefinition.h"
 #import "CHFacebookDefinition.h"
 #import "CHGoogleDefinition.h"
 #import "CHInstagramDefinition.h"
 #import "CHTwitterDefinition.h"
 #import "CHYammerDefinition.h"
 
-@interface CHOAuthService () {
+@interface CHOAuthServiceDefinition () {
 @private
 	NSString *_clientId;
 	NSString *_secret;
@@ -21,13 +21,13 @@
 
 @end
 
-@implementation CHOAuthService
+@implementation CHOAuthServiceDefinition
 
-+(CHOAuthService *) serviceForProvider:(CHServiceProvider) serviceProvider
++(CHOAuthServiceDefinition *) serviceDefintionForProvider:(CHServiceProvider) serviceProvider
 												  clientId:(NSString *) clientId
 													 secret:(NSString *) secret {
 	
-	CHOAuthService *service;
+	CHOAuthServiceDefinition *service;
 	switch (serviceProvider) {
 		case CHServiceProviderFacebook:
 			service = [[CHFacebookDefinition alloc] initWithClientId:clientId secret:secret];
@@ -75,7 +75,7 @@
 	return OUATH_V2;
 }
 
-// Nil defaults.
+// Nil defaults for everything.
 
 - (NSString *)serviceName {
 	return nil;
@@ -91,6 +91,18 @@
 
 - (NSString *)redirectURLPath {
 	return nil;
+}
+
+- (NSString *)requestURLPath {
+	return nil;
+}
+
+- (NSDictionary *)additionalParameters {
+	return nil;
+}
+
+-(NSString *) accessTokenKeyPath {
+	return @"access_token";
 }
 
 @end

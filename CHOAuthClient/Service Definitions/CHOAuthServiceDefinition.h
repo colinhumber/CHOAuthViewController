@@ -20,10 +20,10 @@ typedef enum {
 	CHServiceProviderYammer
 } CHServiceProvider;
 
-@interface CHOAuthService : NSObject<CHOAuthServiceDefinition>
+@interface CHOAuthServiceDefinition : NSObject
 
 // Service factory method.
-+(CHOAuthService *) serviceForProvider:(CHServiceProvider) serviceProvider
++(CHOAuthServiceDefinition *) serviceDefintionForProvider:(CHServiceProvider) serviceProvider
 												  clientId:(NSString *) clientId
 													 secret:(NSString *) secret;
 
@@ -50,8 +50,6 @@ typedef enum {
 
 // redirect URL defined for the service. Sometimes called callback URL. Used in both oAuth 1.0 and 2.0
 - (NSString *)redirectURLPath;
-
-@optional
 
 // request URL defined for the service. Only used for oAuth 1.0 services
 - (NSString *)requestURLPath;
