@@ -49,7 +49,7 @@ NSString* AccessTokenSavePath(NSString *serviceName) {
 }
 
 #pragma mark - Actions
-- (void)loginToService:(id<CHOAuthServiceDefinition>)service {
+- (void)loginToService:(CHOAuthServiceDefinition *)service {
 	CHOAuthViewController *oauthController = [[CHOAuthViewController alloc] initWithServiceDefinition:service];
 	[self presentViewController:oauthController animated:YES completion:nil];
 }
@@ -86,7 +86,7 @@ NSString* AccessTokenSavePath(NSString *serviceName) {
 
 #pragma mark - Notifications
 - (void)didReceiveAccessToken:(NSNotification *)note {
-	id<CHOAuthServiceDefinition> definition = [note.userInfo objectForKey:CHServiceDefinitionKey];
+	CHOAuthServiceDefinition* definition = [note.userInfo objectForKey:CHServiceDefinitionKey];
 	self.accessToken = note.object;
 
 	self.accessTokenLabel.text = [self.accessToken description];

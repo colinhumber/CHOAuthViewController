@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CHOAuthServiceDefinition.h"
 
-@protocol CHOAuthServiceDefinition;
-
 // the following notifications have a user info key "CHServiceDefinition" with an object conforming to the CHOAuthServiceDefinition protocol
 // defining the service associated with the access token
 #define CHServiceDefinitionKey @"CHServiceDefinition"
