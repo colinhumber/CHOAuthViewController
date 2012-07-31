@@ -8,13 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+	CHOAuthVersion1,
+	CHOAuthVersion2
+} CHOAuthVersion;
+
 @protocol CHOAuthServiceDefinition <NSObject>
 
 // name of the service being defined. Used to generate the save path for the access token and is displayed on the popup's navigation bar
 - (NSString *)serviceName;
 
 // oAuth version supported by the service. Must be either OAuth 1.0 or 2.0. If using OAuth 1.0A, set to 1.0
-- (CGFloat)oAuthVersion;
+- (CHOAuthVersion)oAuthVersion;
 
 // client ID for the application. Sometimes called client key or consumer key
 - (NSString *)clientID;

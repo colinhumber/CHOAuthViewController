@@ -26,10 +26,10 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 @property (nonatomic, strong) id<CHOAuthServiceDefinition> serviceDefinition;
 @property (nonatomic, strong) LROAuth2Client *client;
 @property (nonatomic, strong) CHOAuthClient *legacyClient;
-@property (nonatomic, readonly) BOOL useLegacyOAuth;
 
 - (IBAction)cancel;
 - (NSDictionary *)notificationUserInfo;
+
 @end
 
 
@@ -41,7 +41,6 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 @synthesize serviceDefinition = _serviceDefinition;
 @synthesize client = _client;
 @synthesize legacyClient = _legacyClient;
-@dynamic useLegacyOAuth;
 
 
 - (id)initWithServiceDefinition:(id<CHOAuthServiceDefinition>)serviceDefinition {
@@ -64,7 +63,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 		NSAssert(authorizeURL != nil, @"A valid authorize URL path must be provided");
 		NSAssert(tokenURL != nil, @"A valid token URL path must be provided");
 		
-		if (self.useLegacyOAuth) {
+		if ([serviceDefinition oAuthVersion] == CHOAuthVersion1) {
 			NSAssert(requestURL != nil, @"A valid request URL path must be provided");
 		
 			self.legacyClient = [[CHOAuthClient alloc] initWithConsumerKey:[_serviceDefinition clientID] 
@@ -97,10 +96,19 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+	UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    activityIndicator.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    CGRect frame = activityIndicator.frame;
+    frame.origin.x = floorf(self.view.bounds.size.width/2 - frame.size.width/2);
+    frame.origin.y = floorf(self.view.bounds.size.height/2 - frame.size.height/2) - 20;
+    activityIndicator.frame = frame;
+    [activityIndicator startAnimating];
+    [self.view insertSubview:activityIndicator belowSubview:self.webView];
+
+	self.spinner = activityIndicator;//[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 
 	self.navigationBar.topItem.title = [NSString stringWithFormat:@"Connect to %@", [self.serviceDefinition serviceName]];
-	self.navigationBar.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinner];
+//	self.navigationBar.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinner];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -109,7 +117,7 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 		additionalParameters = [self.serviceDefinition additionalParameters];		
 	}
 
-	if (self.useLegacyOAuth) {
+	if ([self.serviceDefinition oAuthVersion] == CHOAuthVersion1) {
 		[self.legacyClient authorizeUsingWebView:self.webView additionalParameters:additionalParameters];
 	}
 	else {
@@ -122,14 +130,17 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 }
 
 - (void)dealloc {
-	self.webView.delegate = nil;
+	if (_webView.isLoading) {
+        [_webView stopLoading];
+    }
+	
+    _webView.delegate = nil;
 }
-
 #pragma mark - Actions
 - (void)refreshAccessToken:(id)accessToken {
 	NSAssert(self.serviceDefinition != nil, @"A service definition must be provided before refreshing an access token.");
 	
-	if (self.useLegacyOAuth) {
+	if ([self.serviceDefinition oAuthVersion] == CHOAuthVersion1) {
 		NSLog(@"OAuth 1.0(A) does not support refreshing access token.");
 	}
 	else {
@@ -142,10 +153,6 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 }
 
 #pragma mark - Dynamic Properties
-- (BOOL)useLegacyOAuth {
-	return [self.serviceDefinition oAuthVersion] == 1.0;
-}
-
 - (NSDictionary *)notificationUserInfo {
 	return [NSDictionary dictionaryWithObjectsAndKeys:
 			self.serviceDefinition, CHServiceDefinitionKey,
@@ -180,6 +187,14 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 	[self.spinner stopAnimating];
+	
+	CATransition* transition = [CATransition animation];
+    transition.duration = 0.25;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    transition.type = kCATransitionFade;
+    [self.view.layer addAnimation:transition forKey:nil];
+	
+    webView.hidden = NO;
 }
 
 @end

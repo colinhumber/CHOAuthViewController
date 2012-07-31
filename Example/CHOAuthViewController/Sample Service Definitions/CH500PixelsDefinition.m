@@ -14,8 +14,8 @@
 	return @"500px";
 }
 
-- (CGFloat)oAuthVersion {
-	return 1.0;
+- (CHOAuthVersion)oAuthVersion {
+	return CHOAuthVersion1;
 }
 
 - (NSString *)clientID {

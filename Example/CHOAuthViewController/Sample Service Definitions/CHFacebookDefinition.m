@@ -14,8 +14,8 @@
 	return @"Facebook";
 }
 
-- (CGFloat)oAuthVersion {
-	return 2.0;
+- (CHOAuthVersion)oAuthVersion {
+	return CHOAuthVersion2;
 }
 
 - (NSString *)clientID {

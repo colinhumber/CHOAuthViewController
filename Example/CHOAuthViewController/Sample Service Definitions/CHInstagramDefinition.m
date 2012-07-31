@@ -14,16 +14,16 @@
 	return @"Instagram";
 }
 
-- (CGFloat)oAuthVersion {
-	return 2.0;
+- (CHOAuthVersion)oAuthVersion {
+	return CHOAuthVersion2;
 }
 
 - (NSString *)clientID {
-	return @"d2eb5be8b572404383d6a3ac94f654c4";
+	return @"";
 }
 
 - (NSString *)clientSecret {
-	return @"3849d8323799403580eb80beda7b152f";
+	return @"";
 }
 
 - (NSString *)requestURLPath {
