@@ -12,7 +12,7 @@
 #import "LROAuth2ClientDelegate.h"
 #import "CHOAuthClient.h"
 #import "CHOAuthClientDelegate.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 NSString *const CHOAuthDidReceiveAccessTokenNotification  = @"CHOAuthDidReceiveAccessTokenNotification";
 NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAccessTokenNotification";
@@ -105,10 +105,8 @@ NSString *const CHOAuthDidRefreshAccessTokenNotification = @"CHOAuthDidRefreshAc
     [activityIndicator startAnimating];
     [self.view insertSubview:activityIndicator belowSubview:self.webView];
 
-	self.spinner = activityIndicator;//[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-
+	self.spinner = activityIndicator;
 	self.navigationBar.topItem.title = [NSString stringWithFormat:@"Connect to %@", [self.serviceDefinition serviceName]];
-//	self.navigationBar.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.spinner];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
